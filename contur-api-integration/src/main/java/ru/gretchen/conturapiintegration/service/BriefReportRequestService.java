@@ -1,6 +1,6 @@
 package ru.gretchen.conturapiintegration.service;
 
-import ru.gretchen.conturapiintegration.model.BriefReportRequestEntity;
+import ru.gretchen.conturapiintegration.model.briefreport.BriefReportRequestEntity;
 
 public interface BriefReportRequestService {
 

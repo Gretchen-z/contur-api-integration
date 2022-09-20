@@ -1,4 +1,4 @@
-package ru.gretchen.conturapiintegration.model;
+package ru.gretchen.conturapiintegration.model.req;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -7,18 +7,15 @@ import lombok.Setter;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
-import javax.persistence.Embedded;
 
 @Embeddable
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class BriefReport {
+public class СontactPhones {
 
-    @Embedded
-    private Summary summary;
+    @Column(name = "count_contact_phones")
+    private int count;
 
-    @Column(name = "href")
-    private String href;
 }

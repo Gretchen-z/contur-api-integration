@@ -1,4 +1,4 @@
-package ru.gretchen.conturapiintegration.model;
+package ru.gretchen.conturapiintegration.model.req;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -14,8 +14,8 @@ import java.util.Objects;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "IN_KF_RESPONSE_BRIEF_REPORT")
-public class BriefReportResponseEntity {
+@Table(name = "IN_KF_RESPONSE_BASIC_DETAILS")
+public class BasicDetailsResponseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -30,8 +30,7 @@ public class BriefReportResponseEntity {
     @Column(name = "focus_href")
     private String focusHref;
 
-    @Embedded
-    private BriefReport briefReport;
+
 
     @Override
     public boolean equals(Object o) {
@@ -41,7 +40,7 @@ public class BriefReportResponseEntity {
         if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) {
             return false;
         }
-        final BriefReportResponseEntity that = (BriefReportResponseEntity) o;
+        final BasicDetailsResponseEntity that = (BasicDetailsResponseEntity) o;
         return Objects.equals(id, that.id);
     }
 

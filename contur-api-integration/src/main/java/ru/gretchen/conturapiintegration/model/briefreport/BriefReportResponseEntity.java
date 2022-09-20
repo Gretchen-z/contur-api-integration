@@ -1,10 +1,11 @@
-package ru.gretchen.conturapiintegration.model;
+package ru.gretchen.conturapiintegration.model.briefreport;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.Hibernate;
+import ru.gretchen.conturapiintegration.model.BriefReport;
 
 import javax.persistence.*;
 import java.util.Objects;
@@ -14,8 +15,8 @@ import java.util.Objects;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "IN_KF_REQUEST")
-public class BriefReportRequestEntity {
+@Table(name = "IN_KF_RESPONSE_BRIEF_REPORT")
+public class BriefReportResponseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -23,6 +24,15 @@ public class BriefReportRequestEntity {
 
     @Column(name = "inn")
     private String inn;
+
+    @Column(name = "ogrn")
+    private String ogrn;
+
+    @Column(name = "focus_href")
+    private String focusHref;
+
+    @Embedded
+    private BriefReport briefReport;
 
     @Override
     public boolean equals(Object o) {
@@ -32,7 +42,7 @@ public class BriefReportRequestEntity {
         if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) {
             return false;
         }
-        final BriefReportRequestEntity that = (BriefReportRequestEntity) o;
+        final BriefReportResponseEntity that = (BriefReportResponseEntity) o;
         return Objects.equals(id, that.id);
     }
 

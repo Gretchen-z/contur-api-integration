@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.gretchen.conturapiintegration.exception.BriefReportRequestNotExistException;
 import ru.gretchen.conturapiintegration.exception.BriefReportRequestNotSaveException;
-import ru.gretchen.conturapiintegration.model.BriefReportRequestEntity;
+import ru.gretchen.conturapiintegration.model.briefreport.BriefReportRequestEntity;
 import ru.gretchen.conturapiintegration.repository.BriefReportRequestRepository;
 import ru.gretchen.conturapiintegration.service.BriefReportRequestService;
 

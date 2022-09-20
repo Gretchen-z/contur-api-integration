@@ -5,7 +5,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import ru.gretchen.conturapiintegration.exception.GetBriefReportException;
 import ru.gretchen.conturapiintegration.exception.SendingRequestToConturApiException;
-import ru.gretchen.conturapiintegration.model.BriefReportResponseEntity;
+import ru.gretchen.conturapiintegration.model.briefreport.BriefReportResponseEntity;
 import ru.gretchen.conturapiintegration.service.ConturIntegratorService;
 
 import java.io.IOException;

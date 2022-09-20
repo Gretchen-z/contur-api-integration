@@ -4,7 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.gretchen.conturapiintegration.exception.BriefReportResponseNotSaveException;
-import ru.gretchen.conturapiintegration.model.BriefReportResponseEntity;
+import ru.gretchen.conturapiintegration.model.briefreport.BriefReportResponseEntity;
 import ru.gretchen.conturapiintegration.repository.BriefReportResponseRepository;
 import ru.gretchen.conturapiintegration.service.BriefReportResponseService;
 
