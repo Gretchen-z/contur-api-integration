@@ -1,0 +1,57 @@
+databaseChangeLog:
+  - changeSet:
+      id: "1.0"
+      author: gretchen
+      changes:
+        - createTable:
+            tableName: IN_KF_REQUEST
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: inn
+                  type: varchar (12)
+                  constraints:
+                    nullable: false
+
+        - createTable:
+            tableName: IN_KF_RESPONSE_BRIEF_REPORT
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: inn
+                  type: varchar (12)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: ogrn
+                  type: varchar (15)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: focus_href
+                  type: varchar (50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: green_statements
+                  type: boolean
+                  constraints:
+                    nullable: false
+              - column:
+                  name: yellow_statements
+                  type: boolean
+                  constraints:
+                    nullable: false
+              - column:
+                  name: href
+                  type: varchar (150)
