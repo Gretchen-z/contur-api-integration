@@ -5,9 +5,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.Hibernate;
-import ru.gretchen.conturapiintegration.model.BriefReport;
+import ru.gretchen.conturapiintegration.model.req.address.ForeignAddress;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Objects;
 
 @Getter
@@ -15,32 +16,36 @@ import java.util.Objects;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "IN_KF_RESPONSE_BASIC_DETAILS")
-public class BasicDetailsResponseEntity {
+@Table(name = "IN_KF_RESPONSE_UL_HEAD")
+public class HeadEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "inn")
-    private String inn;
+    @Column(name = "fio")
+    private String fio;
 
-    @Column(name = "ogrn")
-    private String ogrn;
+    @Column(name = "innfl")
+    private String innfl;
 
-    @Column(name = "focus_href")
-    private String focusHref;
+    @Column(name = "position")
+    private String position;
 
-    @OneToOne(fetch = FetchType.LAZY,
-            orphanRemoval = true)
-    @JoinColumn(name = "ul_id", referencedColumnName = "id")
-    private ULEntity UL;
+    @Column(name = "date")
+    private LocalDate date;
+
+    @Column(name = "first_date")
+    private LocalDate firstDate;
+
+    @Column(name = "is_inaccuracy")
+    private boolean isInaccuracy;
+
+    @Column(name = "inaccuracy_date")
+    private boolean inaccuracyDate;
 
     @Embedded
-    private BriefReport briefReport;
-
-    @Embedded
-    private СontactPhones contactPhones;
+    private StructuredFio structuredFio;
 
     @Override
     public boolean equals(Object o) {
@@ -50,7 +55,7 @@ public class BasicDetailsResponseEntity {
         if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) {
             return false;
         }
-        final BasicDetailsResponseEntity that = (BasicDetailsResponseEntity) o;
+        final HeadEntity that = (HeadEntity) o;
         return Objects.equals(id, that.id);
     }
 
@@ -58,4 +63,5 @@ public class BasicDetailsResponseEntity {
     public int hashCode() {
         return Objects.hash(id);
     }
+
 }

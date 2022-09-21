@@ -5,9 +5,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.Hibernate;
-import ru.gretchen.conturapiintegration.model.BriefReport;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Objects;
 
 @Getter
@@ -15,32 +15,24 @@ import java.util.Objects;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "IN_KF_RESPONSE_BASIC_DETAILS")
-public class BasicDetailsResponseEntity {
+@Table(name = "IN_KF_RESPONSE_LEGAL_NAME")
+public class LegalNameEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "inn")
-    private String inn;
+    @Column(name = "short_name")
+    private String shortName;
 
-    @Column(name = "ogrn")
-    private String ogrn;
+    @Column(name = "full_name")
+    private String fullName;
 
-    @Column(name = "focus_href")
-    private String focusHref;
+    @Column(name = "readable_name")
+    private String readableName;
 
-    @OneToOne(fetch = FetchType.LAZY,
-            orphanRemoval = true)
-    @JoinColumn(name = "ul_id", referencedColumnName = "id")
-    private ULEntity UL;
-
-    @Embedded
-    private BriefReport briefReport;
-
-    @Embedded
-    private СontactPhones contactPhones;
+    @Column(name = "date")
+    private LocalDate date;
 
     @Override
     public boolean equals(Object o) {
@@ -50,7 +42,7 @@ public class BasicDetailsResponseEntity {
         if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) {
             return false;
         }
-        final BasicDetailsResponseEntity that = (BasicDetailsResponseEntity) o;
+        final LegalNameEntity that = (LegalNameEntity) o;
         return Objects.equals(id, that.id);
     }
 

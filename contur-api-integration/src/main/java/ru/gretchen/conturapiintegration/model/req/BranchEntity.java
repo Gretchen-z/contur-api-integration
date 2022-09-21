@@ -5,9 +5,11 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.Hibernate;
-import ru.gretchen.conturapiintegration.model.BriefReport;
+import ru.gretchen.conturapiintegration.model.req.address.ForeignAddress;
+import ru.gretchen.conturapiintegration.model.req.address.ParsedAddressRF;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Objects;
 
 @Getter
@@ -15,32 +17,27 @@ import java.util.Objects;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "IN_KF_RESPONSE_BASIC_DETAILS")
-public class BasicDetailsResponseEntity {
+@Table(name = "IN_KF_RESPONSE_UL_BRANCH")
+public class BranchEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "inn")
-    private String inn;
+    @Column(name = "name")
+    private String name;
 
-    @Column(name = "ogrn")
-    private String ogrn;
-
-    @Column(name = "focus_href")
-    private String focusHref;
-
-    @OneToOne(fetch = FetchType.LAZY,
-            orphanRemoval = true)
-    @JoinColumn(name = "ul_id", referencedColumnName = "id")
-    private ULEntity UL;
+    @Column(name = "kpp")
+    private String kpp;
 
     @Embedded
-    private BriefReport briefReport;
+    private ParsedAddressRF parsedAddressRF;
 
     @Embedded
-    private СontactPhones contactPhones;
+    private ForeignAddress foreignAddress;
+
+    @Column(name = "date")
+    private LocalDate date;
 
     @Override
     public boolean equals(Object o) {
@@ -50,7 +47,7 @@ public class BasicDetailsResponseEntity {
         if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) {
             return false;
         }
-        final BasicDetailsResponseEntity that = (BasicDetailsResponseEntity) o;
+        final BranchEntity that = (BranchEntity) o;
         return Objects.equals(id, that.id);
     }
 
@@ -58,4 +55,5 @@ public class BasicDetailsResponseEntity {
     public int hashCode() {
         return Objects.hash(id);
     }
+
 }

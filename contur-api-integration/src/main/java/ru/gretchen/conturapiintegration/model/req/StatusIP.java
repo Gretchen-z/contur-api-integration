@@ -7,19 +7,24 @@ import lombok.Setter;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
-import java.util.List;
+import java.time.LocalDate;
 
 @Embeddable
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class СontactPhones {
+public class StatusIP {
 
-    @Column(name = "count_contact_phones")
-    private int count;
+    @Column(name = "status_string")
+    private String statusString;
 
-    @Column(name = "phones")
-    private List<String> phones;
+    @Column(name = "dissolving")
+    private boolean dissolving;
 
+    @Column(name = "dissolved")
+    private boolean dissolved;
+
+    @Column(name = "date")
+    private LocalDate date;
 }

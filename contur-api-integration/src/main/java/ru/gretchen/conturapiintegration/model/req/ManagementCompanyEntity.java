@@ -5,9 +5,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.Hibernate;
-import ru.gretchen.conturapiintegration.model.BriefReport;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Objects;
 
 @Getter
@@ -15,12 +15,15 @@ import java.util.Objects;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "IN_KF_RESPONSE_BASIC_DETAILS")
-public class BasicDetailsResponseEntity {
+@Table(name = "IN_KF_RESPONSE_UL_MANAGEMENT_COMPANY")
+public class ManagementCompanyEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
+
+    @Column(name = "name")
+    private String name;
 
     @Column(name = "inn")
     private String inn;
@@ -28,19 +31,17 @@ public class BasicDetailsResponseEntity {
     @Column(name = "ogrn")
     private String ogrn;
 
-    @Column(name = "focus_href")
-    private String focusHref;
+    @Column(name = "date")
+    private LocalDate date;
 
-    @OneToOne(fetch = FetchType.LAZY,
-            orphanRemoval = true)
-    @JoinColumn(name = "ul_id", referencedColumnName = "id")
-    private ULEntity UL;
+    @Column(name = "first_date")
+    private LocalDate firstDate;
 
-    @Embedded
-    private BriefReport briefReport;
+    @Column(name = "is_inaccuracy")
+    private boolean isInaccuracy;
 
-    @Embedded
-    private СontactPhones contactPhones;
+    @Column(name = "inaccuracy_date")
+    private boolean inaccuracyDate;
 
     @Override
     public boolean equals(Object o) {
@@ -50,7 +51,7 @@ public class BasicDetailsResponseEntity {
         if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) {
             return false;
         }
-        final BasicDetailsResponseEntity that = (BasicDetailsResponseEntity) o;
+        final ManagementCompanyEntity that = (ManagementCompanyEntity) o;
         return Objects.equals(id, that.id);
     }
 
@@ -58,4 +59,5 @@ public class BasicDetailsResponseEntity {
     public int hashCode() {
         return Objects.hash(id);
     }
+
 }

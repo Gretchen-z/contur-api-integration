@@ -1,4 +1,4 @@
-package ru.gretchen.conturapiintegration.model.req;
+package ru.gretchen.conturapiintegration.model.req.address;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -7,19 +7,17 @@ import lombok.Setter;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
-import java.util.List;
 
 @Embeddable
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class СontactPhones {
+public class ForeignAddress {
 
-    @Column(name = "count_contact_phones")
-    private int count;
+    @Column(name = "foreign_address_county_name")
+    private String countryName;
 
-    @Column(name = "phones")
-    private List<String> phones;
-
+    @Column(name = "foreign_address_string")
+    private String addressString;
 }

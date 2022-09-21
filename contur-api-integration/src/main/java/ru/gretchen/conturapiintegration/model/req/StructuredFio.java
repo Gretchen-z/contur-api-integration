@@ -7,19 +7,20 @@ import lombok.Setter;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
-import java.util.List;
 
 @Embeddable
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class СontactPhones {
+public class StructuredFio {
 
-    @Column(name = "count_contact_phones")
-    private int count;
+    @Column(name = "head_first_name")
+    private String firstName;
 
-    @Column(name = "phones")
-    private List<String> phones;
+    @Column(name = "head_last_name")
+    private String lastName;
 
+    @Column(name = "head_middle_name")
+    private String middleName;
 }
