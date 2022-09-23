@@ -46,16 +46,19 @@ public class ULEntity {
     private String opf;
 
     @OneToOne(fetch = FetchType.LAZY,
+            cascade = CascadeType.PERSIST,
             orphanRemoval = true)
     @JoinColumn(name = "legal_name_id", referencedColumnName = "id")
     private LegalNameEntity legalName;
 
     @OneToOne(fetch = FetchType.LAZY,
+            cascade = CascadeType.PERSIST,
             orphanRemoval = true)
     @JoinColumn(name = "legal_address_id", referencedColumnName = "id")
     private LegalAddressEntity legalAddress;
 
     @OneToMany(fetch = FetchType.LAZY,
+            cascade = CascadeType.PERSIST,
             orphanRemoval = true)
     @JoinColumn(name = "ul_id")
     private Set<BranchEntity> branches;
@@ -70,16 +73,19 @@ public class ULEntity {
     private LocalDate dissolutionDate;
 
     @OneToMany(fetch = FetchType.LAZY,
+            cascade = CascadeType.PERSIST,
             orphanRemoval = true)
     @JoinColumn(name = "ul_id")
     private Set<HeadEntity> heads;
 
     @OneToMany(fetch = FetchType.LAZY,
+            cascade = CascadeType.PERSIST,
             orphanRemoval = true)
     @JoinColumn(name = "ul_id")
     private Set<ManagementCompanyEntity> managementCompanies;
 
     @OneToOne(fetch = FetchType.LAZY,
+            cascade = CascadeType.PERSIST,
             orphanRemoval = true)
     @JoinColumn(name = "history_id", referencedColumnName = "id")
     private HistoryEntity history;

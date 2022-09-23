@@ -11,3 +11,8 @@ logging:
   level:
     org.springframework.orm.jpa: DEBUG
     org.springframework.transaction: DEBUG
+conturintegrator:
+  service:
+    uri_brief_report: https://focus-api.kontur.ru/api3/briefReport
+    uri_basic_details: https://focus-api.kontur.ru/api3/req
+    key: 3208d29d15c507395db770d0e65f3711e40374df

@@ -32,11 +32,13 @@ public class BasicDetailsResponseEntity {
     private String focusHref;
 
     @OneToOne(fetch = FetchType.LAZY,
+            cascade = CascadeType.PERSIST,
             orphanRemoval = true)
     @JoinColumn(name = "ul_id", referencedColumnName = "id")
     private ULEntity UL;
 
     @OneToOne(fetch = FetchType.LAZY,
+            cascade = CascadeType.PERSIST,
             orphanRemoval = true)
     @JoinColumn(name = "ip_id", referencedColumnName = "id")
     private IPEntity IP;

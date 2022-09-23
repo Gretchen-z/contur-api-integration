@@ -13,7 +13,7 @@ public class ConturIntegratorResponseEntityExceptionHandler extends ResponseEnti
 
     @ExceptionHandler(value
             = { RequestNotSaveException.class, RequestNotExistException.class,
-            BriefReportResponseNotSaveException.class, GetBriefReportException.class})
+            BriefReportResponseNotSaveException.class, UriException.class})
     protected ResponseEntity<Object> handleConturIntegratorException(
             RuntimeException ex, WebRequest request) {
         return handleExceptionInternal(ex, ex.getMessage(),

@@ -1,7 +1,7 @@
 package ru.gretchen.conturapiintegration.service;
 
-import ru.gretchen.conturapiintegration.model.briefreport.BriefReportResponseEntity;
+import java.net.http.HttpResponse;
 
 public interface ConturIntegratorService {
-    BriefReportResponseEntity getBriefReport(String inn);
+    HttpResponse<String> getReport(String inn, String uri, String key);
 }

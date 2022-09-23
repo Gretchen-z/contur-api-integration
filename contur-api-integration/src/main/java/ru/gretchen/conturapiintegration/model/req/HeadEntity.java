@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.Hibernate;
-import ru.gretchen.conturapiintegration.model.req.address.ForeignAddress;
 
 import javax.persistence.*;
 import java.time.LocalDate;

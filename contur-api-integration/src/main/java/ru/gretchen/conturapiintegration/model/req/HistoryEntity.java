@@ -24,26 +24,31 @@ public class HistoryEntity {
     private Long id;
 
     @OneToMany(fetch = FetchType.LAZY,
+            cascade = CascadeType.PERSIST,
             orphanRemoval = true)
     @JoinColumn(name = "ul_history_id")
     private Set<KppEntity> kpps;
 
     @OneToMany(fetch = FetchType.LAZY,
+            cascade = CascadeType.PERSIST,
             orphanRemoval = true)
     @JoinColumn(name = "ul_history_id")
     private Set<LegalNameEntity> legalNames;
 
     @OneToMany(fetch = FetchType.LAZY,
+            cascade = CascadeType.PERSIST,
             orphanRemoval = true)
     @JoinColumn(name = "ul_history_id")
     private Set<LegalAddressEntity> legalAddresses;
 
     @OneToMany(fetch = FetchType.LAZY,
+            cascade = CascadeType.PERSIST,
             orphanRemoval = true)
     @JoinColumn(name = "ul_history_id")
     private Set<ManagementCompanyEntity> managementCompanies;
 
     @OneToMany(fetch = FetchType.LAZY,
+            cascade = CascadeType.PERSIST,
             orphanRemoval = true)
     @JoinColumn(name = "ul_history_id")
     private Set<HeadEntity> heads;

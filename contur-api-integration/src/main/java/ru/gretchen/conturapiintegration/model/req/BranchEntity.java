@@ -31,6 +31,7 @@ public class BranchEntity {
     private String kpp;
 
     @OneToOne(fetch = FetchType.LAZY,
+            cascade = CascadeType.PERSIST,
             orphanRemoval = true)
     @JoinColumn(name = "parsed_address_rf_id", referencedColumnName = "id")
     private ParsedAddressRFEntity parsedAddressRF;
