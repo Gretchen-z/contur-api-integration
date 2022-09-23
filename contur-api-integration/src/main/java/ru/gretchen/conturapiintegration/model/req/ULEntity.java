@@ -30,7 +30,7 @@ public class ULEntity {
     @Column(name = "okato")
     private String okato;
 
-    @Column(name = "iokfsd")
+    @Column(name = "okfs")
     private String okfs;
 
     @Column(name = "oktmo")

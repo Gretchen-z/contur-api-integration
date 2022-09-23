@@ -1,0 +1,58 @@
+databaseChangeLog:
+  - changeSet:
+      id: "1.4"
+      author: gretchen
+      changes:
+        - createTable:
+            tableName: IN_KF_RESPONSE_BASIC_DETAILS
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: inn
+                  type: varchar (10)
+              - column:
+                  name: ogrn
+                  type: varchar (20)
+              - column:
+                  name: focus_href
+                  type: varchar (100)
+              - column:
+                  name: ul_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: FK_UL_BASIC_DETAILS
+                    references: IN_KF_RESPONSE_UL(id)
+              - column:
+                  name: ip_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: FK_IP_BASIC_DETAILS
+                    references: IN_KF_RESPONSE_IP(id)
+              - column:
+                  name: green_statements
+                  type: boolean
+              - column:
+                  name: yellow_statements
+                  type: boolean
+              - column:
+                  name: red_statements
+                  type: boolean
+              - column:
+                  name: href
+                  type: varchar (150)
+              - column:
+                  name: count_contact_phones
+                  type: bigint
+              - column:
+                  name: contact_phones
+                  type: varchar (15)[]
+
+
+
+
+

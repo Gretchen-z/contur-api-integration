@@ -41,7 +41,7 @@ public class ManagementCompanyEntity {
     private boolean isInaccuracy;
 
     @Column(name = "inaccuracy_date")
-    private boolean inaccuracyDate;
+    private LocalDate inaccuracyDate;
 
     @Override
     public boolean equals(Object o) {

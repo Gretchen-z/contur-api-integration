@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.Hibernate;
-import ru.gretchen.conturapiintegration.model.req.address.ForeignAddress;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -16,36 +15,19 @@ import java.util.Objects;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "IN_KF_RESPONSE_UL_HEAD")
-public class HeadEntity {
+@Table(name = "IN_KF_RESPONSE_UL_KPP")
+public class KppEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "fio")
-    private String fio;
-
-    @Column(name = "innfl")
-    private String innfl;
-
-    @Column(name = "position")
-    private String position;
+    @Column(name = "kpp")
+    private String kpp;
 
     @Column(name = "date")
     private LocalDate date;
 
-    @Column(name = "first_date")
-    private LocalDate firstDate;
-
-    @Column(name = "is_inaccuracy")
-    private boolean isInaccuracy;
-
-    @Column(name = "inaccuracy_date")
-    private LocalDate inaccuracyDate;
-
-    @Embedded
-    private StructuredFio structuredFio;
 
     @Override
     public boolean equals(Object o) {
@@ -55,7 +37,7 @@ public class HeadEntity {
         if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) {
             return false;
         }
-        final HeadEntity that = (HeadEntity) o;
+        final KppEntity that = (KppEntity) o;
         return Objects.equals(id, that.id);
     }
 

@@ -1,7 +1,7 @@
 package ru.gretchen.conturapiintegration.exception;
 
-public class BriefReportRequestNotExistException extends RuntimeException{
-    public BriefReportRequestNotExistException(Long inn) {
+public class RequestNotExistException extends RuntimeException{
+    public RequestNotExistException(Long inn) {
         super("Запрос с ИНН " + inn + " не существует.");
     }
 }

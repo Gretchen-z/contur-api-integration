@@ -1,0 +1,207 @@
+databaseChangeLog:
+  - changeSet:
+      id: "1.1"
+      author: gretchen
+      changes:
+        - createTable:
+            tableName: IN_KF_RESPONSE_UL_HISTORY
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+
+        - createTable:
+            tableName: IN_KF_RESPONSE_UL_KPP
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: kpp
+                  type: varchar (10)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: date
+                  type: date
+              - column:
+                  name: ul_history_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: FK_UL_HISTORY_UL_KPP
+                    references: IN_KF_RESPONSE_UL_HISTORY(id)
+
+        - createTable:
+            tableName: IN_KF_RESPONSE_UL_LEGAL_NAME
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: short_name
+                  type: varchar (100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: full_name
+                  type: varchar (150)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: readable_name
+                  type: varchar (100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: date
+                  type: date
+                  constraints:
+                    nullable: false
+              - column:
+                  name: ul_history_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: FK_UL_HISTORY_UL_LEGAL_NAME
+                    references: IN_KF_RESPONSE_UL_HISTORY(id)
+
+        - createTable:
+            tableName: IN_KF_RESPONSE_UL_PARSED_ADDRESS_RF
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: zip_code
+                  type: varchar (10)
+              - column:
+                  name: kladr_code
+                  type: varchar (20)
+              - column:
+                  name: region_code
+                  type: varchar (10)
+              - column:
+                  name: region_topo_short_name
+                  type: varchar (10)
+              - column:
+                  name: region_topo_full_name
+                  type: varchar (50)
+              - column:
+                  name: regin_topo_value
+                  type: varchar (50)
+              - column:
+                  name: city_topo_short_name
+                  type: varchar (10)
+              - column:
+                  name: city_topo_full_name
+                  type: varchar (50)
+              - column:
+                  name: city_topo_value
+                  type: varchar (50)
+              - column:
+                  name: settlement_topo_short_name
+                  type: varchar (10)
+              - column:
+                  name: settlement_topo_full_name
+                  type: varchar (50)
+              - column:
+                  name: settlement_topo_value
+                  type: varchar (50)
+              - column:
+                  name: street_topo_short_name
+                  type: varchar (10)
+              - column:
+                  name: street_topo_full_name
+                  type: varchar (50)
+              - column:
+                  name: street_topo_value
+                  type: varchar (50)
+              - column:
+                  name: house_topo_short_name
+                  type: varchar (10)
+              - column:
+                  name: house_topo_full_name
+                  type: varchar (50)
+              - column:
+                  name: house_topo_value
+                  type: varchar (50)
+              - column:
+                  name: bulk_topo_short_name
+                  type: varchar (10)
+              - column:
+                  name: bulk_topo_full_name
+                  type: varchar (50)
+              - column:
+                  name: bulk_topo_value
+                  type: varchar (50)
+              - column:
+                  name: flat_topo_short_name
+                  type: varchar (10)
+              - column:
+                  name: flat_topo_full_name
+                  type: varchar (50)
+              - column:
+                  name: flat_topo_value
+                  type: varchar (50)
+              - column:
+                  name: house_raw
+                  type: varchar (10)
+              - column:
+                  name: bulk_raw
+                  type: varchar (10)
+              - column:
+                  name: flat_raw
+                  type: varchar (10)
+              - column:
+                  name: is_converted
+                  type: boolean
+
+        - createTable:
+            tableName: IN_KF_RESPONSE_UL_LEGAL_ADDRESS
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: parsed_address_rf_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: FK_PARSED_ADDRESS_LEGAL_ADDRESS
+                    references: IN_KF_RESPONSE_UL_PARSED_ADDRESS_RF(id)
+              - column:
+                  name: date
+                  type: date
+              - column:
+                  name: first_date
+                  type: date
+              - column:
+                  name: is_inaccuracy
+                  type: boolean
+              - column:
+                  name: inaccuracy_date
+                  type: date
+              - column:
+                  name: ul_history_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: FK_UL_HISTORY_LEGAL_ADDRESS
+                    references: IN_KF_RESPONSE_UL_HISTORY(id)
+
+
+
+
+

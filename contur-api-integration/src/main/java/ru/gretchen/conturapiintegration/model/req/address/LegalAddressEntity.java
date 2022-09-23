@@ -22,8 +22,10 @@ public class LegalAddressEntity {
     @Column(name = "id")
     private Long id;
 
-    @Embedded
-    private ParsedAddressRF parsedAddressRF;
+    @OneToOne(fetch = FetchType.LAZY,
+            orphanRemoval = true)
+    @JoinColumn(name = "parsed_address_rf_id", referencedColumnName = "id")
+    private ParsedAddressRFEntity parsedAddressRF;
 
     @Column(name = "date")
     private LocalDate date;
@@ -35,7 +37,7 @@ public class LegalAddressEntity {
     private boolean isInaccuracy;
 
     @Column(name = "inaccuracy_date")
-    private boolean inaccuracyDate;
+    private LocalDate inaccuracyDate;
 
     @Override
     public boolean equals(Object o) {

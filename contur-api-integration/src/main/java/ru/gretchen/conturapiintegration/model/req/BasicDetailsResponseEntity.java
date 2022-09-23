@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.Hibernate;
-import ru.gretchen.conturapiintegration.model.BriefReport;
+import ru.gretchen.conturapiintegration.model.briefreport.BriefReport;
 
 import javax.persistence.*;
 import java.util.Objects;
@@ -35,6 +35,11 @@ public class BasicDetailsResponseEntity {
             orphanRemoval = true)
     @JoinColumn(name = "ul_id", referencedColumnName = "id")
     private ULEntity UL;
+
+    @OneToOne(fetch = FetchType.LAZY,
+            orphanRemoval = true)
+    @JoinColumn(name = "ip_id", referencedColumnName = "id")
+    private IPEntity IP;
 
     @Embedded
     private BriefReport briefReport;

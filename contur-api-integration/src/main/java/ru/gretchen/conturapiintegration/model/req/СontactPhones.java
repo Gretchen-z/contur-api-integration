@@ -19,7 +19,7 @@ public class СontactPhones {
     @Column(name = "count_contact_phones")
     private int count;
 
-    @Column(name = "phones")
+    @Column(name = "contact_phones")
     private List<String> phones;
 
 }

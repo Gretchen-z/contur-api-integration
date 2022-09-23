@@ -26,6 +26,11 @@ public class HistoryEntity {
     @OneToMany(fetch = FetchType.LAZY,
             orphanRemoval = true)
     @JoinColumn(name = "ul_history_id")
+    private Set<KppEntity> kpps;
+
+    @OneToMany(fetch = FetchType.LAZY,
+            orphanRemoval = true)
+    @JoinColumn(name = "ul_history_id")
     private Set<LegalNameEntity> legalNames;
 
     @OneToMany(fetch = FetchType.LAZY,

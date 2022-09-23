@@ -1,4 +1,4 @@
-package ru.gretchen.conturapiintegration.model.briefreport;
+package ru.gretchen.conturapiintegration.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -15,7 +15,7 @@ import java.util.Objects;
 @AllArgsConstructor
 @Entity
 @Table(name = "IN_KF_REQUEST")
-public class BriefReportRequestEntity {
+public class RequestEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -32,7 +32,7 @@ public class BriefReportRequestEntity {
         if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) {
             return false;
         }
-        final BriefReportRequestEntity that = (BriefReportRequestEntity) o;
+        final RequestEntity that = (RequestEntity) o;
         return Objects.equals(id, that.id);
     }
 

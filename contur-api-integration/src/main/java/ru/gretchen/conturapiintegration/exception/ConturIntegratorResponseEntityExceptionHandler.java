@@ -12,7 +12,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 public class ConturIntegratorResponseEntityExceptionHandler extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(value
-            = { BriefReportRequestNotSaveException.class, BriefReportRequestNotExistException.class,
+            = { RequestNotSaveException.class, RequestNotExistException.class,
             BriefReportResponseNotSaveException.class, GetBriefReportException.class})
     protected ResponseEntity<Object> handleConturIntegratorException(
             RuntimeException ex, WebRequest request) {

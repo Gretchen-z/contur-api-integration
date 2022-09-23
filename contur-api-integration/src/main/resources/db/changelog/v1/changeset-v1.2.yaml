@@ -1,0 +1,129 @@
+databaseChangeLog:
+  - changeSet:
+      id: "1.2"
+      author: gretchen
+      changes:
+        - createTable:
+            tableName: IN_KF_RESPONSE_UL
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: kpp
+                  type: varchar (10)
+              - column:
+                  name: okpo
+                  type: varchar (20)
+              - column:
+                  name: okato
+                  type: varchar (15)
+              - column:
+                  name: okfs
+                  type: varchar (15)
+              - column:
+                  name: oktmo
+                  type: varchar (15)
+              - column:
+                  name: okogu
+                  type: varchar (15)
+              - column:
+                  name: okopf
+                  type: varchar (10)
+              - column:
+                  name: opf
+                  type: varchar (100)
+              - column:
+                  name: legal_name_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: FK_LEGAL_NAME_RESPONSE_UL
+                    references: IN_KF_RESPONSE_UL_LEGAL_NAME(id)
+              - column:
+                  name: legal_address_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: FK_LEGAL_ADDRESS_RESPONSE_UL
+                    references: IN_KF_RESPONSE_UL_LEGAL_ADDRESS(id)
+              - column:
+                  name: status_string
+                  type: varchar (100)
+              - column:
+                  name: reorganizing
+                  type: boolean
+              - column:
+                  name: bankrupting
+                  type: boolean
+              - column:
+                  name: dissolving
+                  type: boolean
+              - column:
+                  name: dissolved
+                  type: boolean
+              - column:
+                  name: status_date
+                  type: date
+              - column:
+                  name: registration_date
+                  type: date
+              - column:
+                  name: dissolution_date
+                  type: date
+              - column:
+                  name: history_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: FK_HISTORY_UL
+                    references: IN_KF_RESPONSE_UL_HISTORY(id)
+
+        - createTable:
+            tableName: IN_KF_RESPONSE_UL_BRANCH
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar (100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: kpp
+                  type: varchar (20)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: parsed_address_rf_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: FK_PARSED_ADDRESS_BRANCH
+                    references: IN_KF_RESPONSE_UL_PARSED_ADDRESS_RF(id)
+              - column:
+                  name: ul_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: FK_UL_BRANCH
+                    references: IN_KF_RESPONSE_UL(id)
+              - column:
+                  name: foreign_address_county_name
+                  type: varchar (100)
+              - column:
+                  name: foreign_address_string
+                  type: varchar (100)
+              - column:
+                  name: date
+                  type: date
+                  constraints:
+                    nullable: false
+
+
+
+
+
+

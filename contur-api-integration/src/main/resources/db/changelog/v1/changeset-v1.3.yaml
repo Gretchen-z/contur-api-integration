@@ -1,0 +1,99 @@
+databaseChangeLog:
+  - changeSet:
+      id: "1.3"
+      author: gretchen
+      changes:
+        - createTable:
+            tableName: IN_KF_RESPONSE_UL_HEAD
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: fio
+                  type: varchar (100)
+              - column:
+                  name: innfl
+                  type: varchar (20)
+              - column:
+                  name: position
+                  type: varchar (30)
+              - column:
+                  name: date
+                  type: date
+                  constraints:
+                    nullable: false
+              - column:
+                  name: first_date
+                  type: date
+                  constraints:
+                    nullable: false
+              - column:
+                  name: is_inaccuracy
+                  type: boolean
+              - column:
+                  name: inaccuracy_date
+                  type: date
+              - column:
+                  name: head_first_name
+                  type: varchar (30)
+              - column:
+                  name: head_last_name
+                  type: varchar (30)
+              - column:
+                  name: head_middle_name
+                  type: varchar (30)
+              - column:
+                  name: ul_history_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: FK_UL_HISTORY_UL_HEAD
+                    references: IN_KF_RESPONSE_UL_HISTORY(id)
+
+        - createTable:
+            tableName: IN_KF_RESPONSE_UL_MANAGEMENT_COMPANY
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar (100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: inn
+                  type: varchar (20)
+              - column:
+                  name: ogrn
+                  type: varchar (20)
+              - column:
+                  name: date
+                  type: date
+              - column:
+                  name: first_date
+                  type: date
+              - column:
+                  name: is_inaccuracy
+                  type: boolean
+              - column:
+                  name: inaccuracy_date
+                  type: date
+              - column:
+                  name: ul_history_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: FK_UL_HISTORY_UL_MANAGEMENT_COMPANY
+                    references: IN_KF_RESPONSE_UL_HISTORY(id)
+
+
+
+
+
+

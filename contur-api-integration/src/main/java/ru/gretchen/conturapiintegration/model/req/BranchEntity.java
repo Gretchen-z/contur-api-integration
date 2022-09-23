@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.Hibernate;
 import ru.gretchen.conturapiintegration.model.req.address.ForeignAddress;
-import ru.gretchen.conturapiintegration.model.req.address.ParsedAddressRF;
+import ru.gretchen.conturapiintegration.model.req.address.ParsedAddressRFEntity;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -30,8 +30,10 @@ public class BranchEntity {
     @Column(name = "kpp")
     private String kpp;
 
-    @Embedded
-    private ParsedAddressRF parsedAddressRF;
+    @OneToOne(fetch = FetchType.LAZY,
+            orphanRemoval = true)
+    @JoinColumn(name = "parsed_address_rf_id", referencedColumnName = "id")
+    private ParsedAddressRFEntity parsedAddressRF;
 
     @Embedded
     private ForeignAddress foreignAddress;

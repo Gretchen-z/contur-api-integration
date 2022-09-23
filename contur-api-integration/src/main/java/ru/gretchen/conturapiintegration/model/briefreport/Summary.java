@@ -1,4 +1,4 @@
-package ru.gretchen.conturapiintegration.model;
+package ru.gretchen.conturapiintegration.model.briefreport;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -20,4 +20,7 @@ public class Summary {
 
     @Column(name = "yellow_statements")
     private boolean yellowStatements;
+
+    @Column(name = "red_statements")
+    private boolean redStatements;
 }

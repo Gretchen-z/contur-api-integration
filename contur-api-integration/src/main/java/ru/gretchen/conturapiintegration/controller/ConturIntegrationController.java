@@ -6,9 +6,9 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import ru.gretchen.conturapiintegration.model.briefreport.BriefReportRequestEntity;
+import ru.gretchen.conturapiintegration.model.RequestEntity;
 import ru.gretchen.conturapiintegration.model.briefreport.BriefReportResponseEntity;
-import ru.gretchen.conturapiintegration.service.BriefReportRequestService;
+import ru.gretchen.conturapiintegration.service.RequestService;
 import ru.gretchen.conturapiintegration.service.BriefReportResponseService;
 import ru.gretchen.conturapiintegration.service.ConturIntegratorService;
 
@@ -20,16 +20,16 @@ import ru.gretchen.conturapiintegration.service.ConturIntegratorService;
 @ApiResponse(responseCode = "404", description = "Request not found")
 public class ConturIntegrationController {
 
-    private final BriefReportRequestService requestService;
+    private final RequestService requestService;
     private final BriefReportResponseService responseService;
     private final ConturIntegratorService conturIntegratorService;
 
     @ApiOperation(value = "Save brief report request",
-            response = BriefReportRequestEntity.class)
+            response = RequestEntity.class)
     @ApiResponse(responseCode = "200", description = "Brief report request saved")
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public BriefReportRequestEntity saveBriefReportRequest(@RequestParam String inn) {
+    public RequestEntity saveBriefReportRequest(@RequestParam String inn) {
         return requestService.saveInn(inn);
     }
 

@@ -31,6 +31,6 @@ public class StatusUL {
     @Column(name = "dissolved")
     private boolean dissolved;
 
-    @Column(name = "date")
+    @Column(name = "status_date")
     private LocalDate date;
 }

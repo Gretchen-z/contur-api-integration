@@ -45,13 +45,79 @@ databaseChangeLog:
               - column:
                   name: green_statements
                   type: boolean
-                  constraints:
-                    nullable: false
               - column:
                   name: yellow_statements
                   type: boolean
-                  constraints:
-                    nullable: false
+              - column:
+                  name: red_statements
+                  type: boolean
               - column:
                   name: href
                   type: varchar (150)
+
+        - createTable:
+            tableName: IN_KF_RESPONSE_IP
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: fio
+                  type: varchar (100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: okpo
+                  type: varchar (15)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: okato
+                  type: varchar (15)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: okfs
+                  type: varchar (10)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: okogu
+                  type: varchar (10)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: okopf
+                  type: varchar (10)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: oktmo
+                  type: varchar (15)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: registration_date
+                  type: date
+                  constraints:
+                    nullable: false
+              - column:
+                  name: dissolution_date
+                  type: date
+              - column:
+                  name: status_string
+                  type: varchar (100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: dissolving
+                  type: boolean
+              - column:
+                  name: dissolved
+                  type: boolean
+              - column:
+                  name: status_date
+                  type: date

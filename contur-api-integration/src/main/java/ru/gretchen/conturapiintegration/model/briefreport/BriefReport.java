@@ -1,4 +1,4 @@
-package ru.gretchen.conturapiintegration.model;
+package ru.gretchen.conturapiintegration.model.briefreport;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

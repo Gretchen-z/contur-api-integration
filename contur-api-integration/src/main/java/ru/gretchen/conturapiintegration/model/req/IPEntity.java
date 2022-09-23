@@ -5,19 +5,20 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.Hibernate;
-import ru.gretchen.conturapiintegration.model.req.address.ForeignAddress;
+import ru.gretchen.conturapiintegration.model.req.address.LegalAddressEntity;
 
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Objects;
+import java.util.Set;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "IN_KF_RESPONSE_UL_HEAD")
-public class HeadEntity {
+@Table(name = "IN_KF_RESPONSE_IP")
+public class IPEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -26,26 +27,36 @@ public class HeadEntity {
     @Column(name = "fio")
     private String fio;
 
-    @Column(name = "innfl")
-    private String innfl;
+    @Column(name = "okpo")
+    private String okpo;
 
-    @Column(name = "position")
-    private String position;
+    @Column(name = "okato")
+    private String okato;
 
-    @Column(name = "date")
-    private LocalDate date;
+    @Column(name = "okfsd")
+    private String okfs;
 
-    @Column(name = "first_date")
-    private LocalDate firstDate;
+    @Column(name = "okogu")
+    private String okogu;
 
-    @Column(name = "is_inaccuracy")
-    private boolean isInaccuracy;
+    @Column(name = "okopf")
+    private String okopf;
 
-    @Column(name = "inaccuracy_date")
-    private LocalDate inaccuracyDate;
+    @Column(name = "opf")
+    private String opf;
+
+    @Column(name = "oktmo")
+    private String oktmo;
+
+    @Column(name = "registration_date")
+    private LocalDate registrationDate;
+
+    @Column(name = "dissolution_date")
+    private LocalDate dissolutionDate;
 
     @Embedded
-    private StructuredFio structuredFio;
+    private StatusIP status;
+
 
     @Override
     public boolean equals(Object o) {
@@ -55,7 +66,7 @@ public class HeadEntity {
         if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) {
             return false;
         }
-        final HeadEntity that = (HeadEntity) o;
+        final IPEntity that = (IPEntity) o;
         return Objects.equals(id, that.id);
     }
 
@@ -63,5 +74,4 @@ public class HeadEntity {
     public int hashCode() {
         return Objects.hash(id);
     }
-
 }
