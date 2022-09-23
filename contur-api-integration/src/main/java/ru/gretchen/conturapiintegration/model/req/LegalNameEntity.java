@@ -1,5 +1,6 @@
 package ru.gretchen.conturapiintegration.model.req;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,7 +11,6 @@ import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Objects;
 
-@Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
@@ -18,6 +18,7 @@ import java.util.Objects;
 @Table(name = "IN_KF_RESPONSE_UL_LEGAL_NAME")
 public class LegalNameEntity {
     @Id
+    @Getter
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
@@ -25,14 +26,22 @@ public class LegalNameEntity {
     @Column(name = "short_name")
     private String shortName;
 
+    @Getter
     @Column(name = "full_name")
-    private String fullName;
+    private String full;
 
+    @Getter
     @Column(name = "readable_name")
-    private String readableName;
+    private String readable;
 
+    @Getter
     @Column(name = "date")
     private LocalDate date;
+
+    @JsonProperty("short")
+    public String getShortName() {
+        return shortName;
+    }
 
     @Override
     public boolean equals(Object o) {
