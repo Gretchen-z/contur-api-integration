@@ -18,7 +18,7 @@ import ru.gretchen.conturapiintegration.service.ConturIntegratorService;
 import java.net.http.HttpResponse;
 
 @RestController
-@RequestMapping(path = "/brief-reports")
+@RequestMapping(path = "/requests")
 @Tag(name = "BriefReport", description = "Getting a brief report from the Contur Focus service")
 @ApiResponse(responseCode = "500", description = "Internal error")
 @ApiResponse(responseCode = "404", description = "Request not found")
@@ -51,7 +51,7 @@ public class ConturIntegrationController {
     @ApiOperation(value = "Save brief report request",
             response = RequestEntity.class)
     @ApiResponse(responseCode = "200", description = "Brief report request saved")
-    @PostMapping
+    @PostMapping(path = "/brief-reports")
     @ResponseStatus(HttpStatus.CREATED)
     public RequestEntity saveBriefReportRequest(@RequestParam String inn) {
         return requestService.saveInn(inn);
@@ -60,7 +60,7 @@ public class ConturIntegrationController {
     @ApiOperation(value = "Get brief report from Contur Focus",
             response = BriefReportResponseEntity.class)
     @ApiResponse(responseCode = "200", description = "Brief report received")
-    @PostMapping
+    @GetMapping(path = "/brief-reports")
     @ResponseStatus(HttpStatus.OK)
     public BriefReportResponseEntity getBriefReportFromConturFocus(@RequestParam Long id) {
         String inn = requestService.getRequestById(id).getInn();
@@ -74,7 +74,7 @@ public class ConturIntegrationController {
     @ApiOperation(value = "Get basic details report from Contur Focus",
             response = BasicDetailsResponseEntity.class)
     @ApiResponse(responseCode = "200", description = "Basic details report received")
-    @PostMapping
+    @GetMapping(path = "/basic-details")
     @ResponseStatus(HttpStatus.OK)
     public BasicDetailsResponseEntity getBasicDetailsReportContrFocus(@RequestParam Long id) {
         String inn = requestService.getRequestById(id).getInn();
