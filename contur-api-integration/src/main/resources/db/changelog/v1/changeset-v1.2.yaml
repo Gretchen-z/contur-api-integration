@@ -4,7 +4,7 @@ databaseChangeLog:
       author: gretchen
       changes:
         - createTable:
-            tableName: IN_KF_RESPONSE_UL
+            tableName: OUT_KF_RESPONSE_UL
             columns:
               - column:
                   name: id
@@ -41,13 +41,13 @@ databaseChangeLog:
                   type: bigint
                   constraints:
                     foreignKeyName: FK_LEGAL_NAME_RESPONSE_UL
-                    references: IN_KF_RESPONSE_UL_LEGAL_NAME(id)
+                    references: OUT_KF_RESPONSE_UL_LEGAL_NAME(id)
               - column:
                   name: legal_address_id
                   type: bigint
                   constraints:
                     foreignKeyName: FK_LEGAL_ADDRESS_RESPONSE_UL
-                    references: IN_KF_RESPONSE_UL_LEGAL_ADDRESS(id)
+                    references: OUT_KF_RESPONSE_UL_LEGAL_ADDRESS(id)
               - column:
                   name: status_string
                   type: varchar (100)
@@ -77,10 +77,10 @@ databaseChangeLog:
                   type: bigint
                   constraints:
                     foreignKeyName: FK_HISTORY_UL
-                    references: IN_KF_RESPONSE_UL_HISTORY(id)
+                    references: OUT_KF_RESPONSE_UL_HISTORY(id)
 
         - createTable:
-            tableName: IN_KF_RESPONSE_UL_BRANCH
+            tableName: OUT_KF_RESPONSE_UL_BRANCH
             columns:
               - column:
                   name: id
@@ -103,13 +103,13 @@ databaseChangeLog:
                   type: bigint
                   constraints:
                     foreignKeyName: FK_PARSED_ADDRESS_BRANCH
-                    references: IN_KF_RESPONSE_UL_PARSED_ADDRESS_RF(id)
+                    references: OUT_KF_RESPONSE_UL_PARSED_ADDRESS_RF(id)
               - column:
                   name: ul_id
                   type: bigint
                   constraints:
                     foreignKeyName: FK_UL_BRANCH
-                    references: IN_KF_RESPONSE_UL(id)
+                    references: OUT_KF_RESPONSE_UL(id)
               - column:
                   name: foreign_address_county_name
                   type: varchar (100)

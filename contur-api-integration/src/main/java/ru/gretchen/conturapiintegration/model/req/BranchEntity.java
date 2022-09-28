@@ -17,7 +17,7 @@ import java.util.Objects;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "IN_KF_RESPONSE_UL_BRANCH")
+@Table(name = "OUT_KF_RESPONSE_UL_BRANCH")
 public class BranchEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

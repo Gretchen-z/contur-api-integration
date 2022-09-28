@@ -15,7 +15,7 @@ import java.util.Objects;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "IN_KF_RESPONSE_BASIC_DETAILS")
+@Table(name = "OUT_KF_RESPONSE_BASIC_DETAILS")
 public class BasicDetailsResponseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

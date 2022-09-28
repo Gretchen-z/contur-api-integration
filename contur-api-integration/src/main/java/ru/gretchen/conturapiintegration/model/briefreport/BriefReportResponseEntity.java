@@ -14,7 +14,7 @@ import java.util.Objects;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "IN_KF_RESPONSE_BRIEF_REPORT")
+@Table(name = "OUT_KF_RESPONSE_BRIEF_REPORT")
 public class BriefReportResponseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -4,7 +4,7 @@ databaseChangeLog:
       author: gretchen
       changes:
         - createTable:
-            tableName: IN_KF_RESPONSE_BASIC_DETAILS_CONTACT_PHONE
+            tableName: OUT_KF_RESPONSE_BASIC_DETAILS_CONTACT_PHONE
             columns:
               - column:
                   name: id
@@ -17,7 +17,7 @@ databaseChangeLog:
                   type: varchar (15)
 
         - createTable:
-            tableName: IN_KF_RESPONSE_BASIC_DETAILS
+            tableName: OUT_KF_RESPONSE_BASIC_DETAILS
             columns:
               - column:
                   name: id
@@ -39,13 +39,13 @@ databaseChangeLog:
                   type: bigint
                   constraints:
                     foreignKeyName: FK_UL_BASIC_DETAILS
-                    references: IN_KF_RESPONSE_UL(id)
+                    references: OUT_KF_RESPONSE_UL(id)
               - column:
                   name: ip_id
                   type: bigint
                   constraints:
                     foreignKeyName: FK_IP_BASIC_DETAILS
-                    references: IN_KF_RESPONSE_IP(id)
+                    references: OUT_KF_RESPONSE_IP(id)
               - column:
                   name: green_statements
                   type: boolean
@@ -66,7 +66,7 @@ databaseChangeLog:
                   type: bigint
                   constraints:
                     foreignKeyName: FK_CONTACT_PHONES_BASIC_DETAILS
-                    references: IN_KF_RESPONSE_BASIC_DETAILS_CONTACT_PHONE(id)
+                    references: OUT_KF_RESPONSE_BASIC_DETAILS_CONTACT_PHONE(id)
 
 
 

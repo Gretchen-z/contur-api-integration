@@ -4,7 +4,7 @@ databaseChangeLog:
       author: gretchen
       changes:
         - createTable:
-            tableName: IN_KF_RESPONSE_UL_HEAD
+            tableName: OUT_KF_RESPONSE_UL_HEAD
             columns:
               - column:
                   name: id
@@ -51,10 +51,10 @@ databaseChangeLog:
                   type: bigint
                   constraints:
                     foreignKeyName: FK_UL_HISTORY_UL_HEAD
-                    references: IN_KF_RESPONSE_UL_HISTORY(id)
+                    references: OUT_KF_RESPONSE_UL_HISTORY(id)
 
         - createTable:
-            tableName: IN_KF_RESPONSE_UL_MANAGEMENT_COMPANY
+            tableName: OUT_KF_RESPONSE_UL_MANAGEMENT_COMPANY
             columns:
               - column:
                   name: id
@@ -90,7 +90,7 @@ databaseChangeLog:
                   type: bigint
                   constraints:
                     foreignKeyName: FK_UL_HISTORY_UL_MANAGEMENT_COMPANY
-                    references: IN_KF_RESPONSE_UL_HISTORY(id)
+                    references: OUT_KF_RESPONSE_UL_HISTORY(id)
 
 
 

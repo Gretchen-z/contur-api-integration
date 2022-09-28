@@ -19,7 +19,7 @@ databaseChangeLog:
                     nullable: false
 
         - createTable:
-            tableName: IN_KF_RESPONSE_BRIEF_REPORT
+            tableName: OUT_KF_RESPONSE_BRIEF_REPORT
             columns:
               - column:
                   name: id
@@ -56,7 +56,7 @@ databaseChangeLog:
                   type: varchar (150)
 
         - createTable:
-            tableName: IN_KF_RESPONSE_IP
+            tableName: OUT_KF_RESPONSE_IP
             columns:
               - column:
                   name: id

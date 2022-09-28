@@ -12,7 +12,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "IN_KF_RESPONSE_UL_PARSED_ADDRESS_RF")
+@Table(name = "OUT_KF_RESPONSE_UL_PARSED_ADDRESS_RF")
 public class ParsedAddressRFEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -16,7 +16,7 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "IN_KF_RESPONSE_UL_HISTORY")
+@Table(name = "OUT_KF_RESPONSE_UL_HISTORY")
 public class HistoryEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -17,7 +17,7 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "IN_KF_RESPONSE_IP")
+@Table(name = "OUT_KF_RESPONSE_IP")
 public class IPEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

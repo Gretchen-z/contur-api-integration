@@ -15,7 +15,7 @@ import java.util.Objects;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "IN_KF_RESPONSE_UL_LEGAL_ADDRESS")
+@Table(name = "OUT_KF_RESPONSE_UL_LEGAL_ADDRESS")
 public class LegalAddressEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

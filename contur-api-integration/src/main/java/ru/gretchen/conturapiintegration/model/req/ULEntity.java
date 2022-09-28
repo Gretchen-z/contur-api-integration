@@ -14,7 +14,7 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "IN_KF_RESPONSE_UL")
+@Table(name = "OUT_KF_RESPONSE_UL")
 public class ULEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

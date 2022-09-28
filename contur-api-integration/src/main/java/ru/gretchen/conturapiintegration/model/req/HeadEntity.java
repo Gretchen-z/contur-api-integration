@@ -15,7 +15,7 @@ import java.util.Objects;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "IN_KF_RESPONSE_UL_HEAD")
+@Table(name = "OUT_KF_RESPONSE_UL_HEAD")
 public class HeadEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
