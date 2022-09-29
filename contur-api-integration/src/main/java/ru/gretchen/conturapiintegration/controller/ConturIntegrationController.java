@@ -5,6 +5,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ru.gretchen.conturapiintegration.model.RequestEntity;
 import ru.gretchen.conturapiintegration.model.briefreport.BriefReportResponseEntity;
@@ -29,7 +30,7 @@ public class ConturIntegrationController {
     @ApiResponse(responseCode = "200", description = "Brief report request saved")
     @PostMapping(path = "/brief-reports")
     @ResponseStatus(HttpStatus.CREATED)
-    public RequestEntity saveBriefReportRequest(@RequestParam String inn) {
+    public ResponseEntity<Long> saveBriefReportRequest(@RequestParam String inn) {
         return requestService.saveInn(inn);
     }
 

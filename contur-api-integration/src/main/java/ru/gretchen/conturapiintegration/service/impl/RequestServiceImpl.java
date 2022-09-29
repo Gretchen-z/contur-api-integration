@@ -1,6 +1,8 @@
 package ru.gretchen.conturapiintegration.service.impl;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.gretchen.conturapiintegration.exception.RequestNotExistException;
@@ -24,11 +26,12 @@ public class RequestServiceImpl implements RequestService {
 
     @Override
     @Transactional
-    public RequestEntity saveInn(String inn) {
+    public ResponseEntity<Long> saveInn(String inn) {
         try {
             RequestEntity entity = new RequestEntity();
             entity.setInn(inn);
-            return repository.save(entity);
+            repository.save(entity);
+            return new ResponseEntity<>(entity.getId(), HttpStatus.CREATED);
         } catch (Exception e) {
             throw new RequestNotSaveException(inn, e.getMessage());
         }
