@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.Hibernate;
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
 import ru.gretchen.conturapiintegration.model.req.address.ForeignAddress;
 import ru.gretchen.conturapiintegration.model.req.address.ParsedAddressRFEntity;
 
@@ -17,6 +19,8 @@ import java.util.Objects;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@DynamicInsert
+@DynamicUpdate
 @Table(name = "OUT_KF_RESPONSE_UL_BRANCH")
 public class BranchEntity {
     @Id

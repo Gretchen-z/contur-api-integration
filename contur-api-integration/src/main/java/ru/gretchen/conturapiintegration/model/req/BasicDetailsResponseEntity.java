@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.Hibernate;
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
 import ru.gretchen.conturapiintegration.model.briefreport.BriefReport;
 
 import javax.persistence.*;
@@ -15,6 +17,8 @@ import java.util.Objects;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@DynamicInsert
+@DynamicUpdate
 @Table(name = "OUT_KF_RESPONSE_BASIC_DETAILS")
 public class BasicDetailsResponseEntity {
     @Id
