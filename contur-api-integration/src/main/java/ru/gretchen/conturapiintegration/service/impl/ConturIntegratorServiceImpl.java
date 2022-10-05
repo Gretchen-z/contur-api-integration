@@ -1,6 +1,6 @@
 package ru.gretchen.conturapiintegration.service.impl;
 
-import com.google.gson.Gson;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import ru.gretchen.conturapiintegration.exception.UriException;
@@ -50,8 +50,15 @@ public class ConturIntegratorServiceImpl implements ConturIntegratorService {
     public BriefReportResponseEntity getBriefReport(Long id) {
         String inn = requestService.getRequestById(id).getInn();
         HttpResponse<String> response = getReport(inn, URI_BRIEF_REPORT, KEY);
-        Gson gson = new Gson();
-        BriefReportResponseEntity responseEntity = gson.fromJson(response.body(), BriefReportResponseEntity.class);
+
+        BriefReportResponseEntity responseEntity = null;
+
+        try {
+            responseEntity = new ObjectMapper().readValue(response.body(),
+                    BriefReportResponseEntity.class);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         briefReportResponseService.saveResponse(responseEntity);
         return responseEntity;
     }
@@ -60,8 +67,16 @@ public class ConturIntegratorServiceImpl implements ConturIntegratorService {
     public BasicDetailsResponseEntity getBasicDetailsReport(Long id) {
         String inn = requestService.getRequestById(id).getInn();
         HttpResponse<String> response = getReport(inn, URI_BASIC_DETAILS, KEY);
-        Gson gson = new Gson();
-        BasicDetailsResponseEntity responseEntity = gson.fromJson(response.body(), BasicDetailsResponseEntity.class);
+
+        BasicDetailsResponseEntity responseEntity = null;
+
+        try {
+            responseEntity = new ObjectMapper().readValue(response.body(),
+                    BasicDetailsResponseEntity.class);
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         basicDetailsResponseService.saveBasicDetailsResponse(responseEntity);
         return responseEntity;
     }

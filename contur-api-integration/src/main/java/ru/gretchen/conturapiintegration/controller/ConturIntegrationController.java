@@ -1,5 +1,7 @@
 package ru.gretchen.conturapiintegration.controller;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -10,6 +12,9 @@ import org.springframework.web.bind.annotation.*;
 import ru.gretchen.conturapiintegration.model.RequestEntity;
 import ru.gretchen.conturapiintegration.model.briefreport.BriefReportResponseEntity;
 import ru.gretchen.conturapiintegration.model.req.BasicDetailsResponseEntity;
+import ru.gretchen.conturapiintegration.model.req.ULEntity;
+import ru.gretchen.conturapiintegration.repository.ULRepository;
+import ru.gretchen.conturapiintegration.service.BasicDetailsResponseService;
 import ru.gretchen.conturapiintegration.service.RequestService;
 import ru.gretchen.conturapiintegration.service.ConturIntegratorService;
 
@@ -24,13 +29,15 @@ public class ConturIntegrationController {
 
     private final RequestService requestService;
     private final ConturIntegratorService conturIntegratorService;
+    private final BasicDetailsResponseService basicDetailsResponseService;
+    private final ULRepository ulRepository;
 
     @ApiOperation(value = "Save brief report request",
             response = RequestEntity.class)
     @ApiResponse(responseCode = "200", description = "Brief report request saved")
-    @PostMapping(path = "/brief-reports")
+    @PostMapping(path = "/request")
     @ResponseStatus(HttpStatus.CREATED)
-    public ResponseEntity<Long> saveBriefReportRequest(@RequestParam String inn) {
+    public ResponseEntity<Long> saveRequest(@RequestParam String inn) {
         return requestService.saveInn(inn);
     }
 
@@ -50,5 +57,12 @@ public class ConturIntegrationController {
     @ResponseStatus(HttpStatus.OK)
     public BasicDetailsResponseEntity getBasicDetailsReportContrFocus(@RequestParam Long id) {
         return conturIntegratorService.getBasicDetailsReport(id);
+    }
+
+    // for check parsing JSON
+    @PostMapping(path = "/check-save")
+    public BasicDetailsResponseEntity postBasicDetailsReport(
+            @RequestBody BasicDetailsResponseEntity responseEntity) {
+        return basicDetailsResponseService.saveBasicDetailsResponse(responseEntity);
     }
 }

@@ -1,9 +1,7 @@
 package ru.gretchen.conturapiintegration.model.req;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.*;
 import org.hibernate.Hibernate;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
@@ -39,12 +37,14 @@ public class BasicDetailsResponseEntity {
             cascade = CascadeType.PERSIST,
             orphanRemoval = true)
     @JoinColumn(name = "ul_id", referencedColumnName = "id")
+    @JsonProperty("UL")
     private ULEntity UL;
 
     @OneToOne(fetch = FetchType.LAZY,
             cascade = CascadeType.PERSIST,
             orphanRemoval = true)
     @JoinColumn(name = "ip_id", referencedColumnName = "id")
+    @JsonProperty("IP")
     private IPEntity IP;
 
     @Embedded
@@ -69,4 +69,5 @@ public class BasicDetailsResponseEntity {
     public int hashCode() {
         return Objects.hash(id);
     }
+
 }
