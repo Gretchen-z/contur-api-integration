@@ -8,13 +8,13 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: bigserial
+                  type: serial
                   constraints:
                     primaryKey: true
                     nullable: false
               - column:
                   name: kpp
-                  type: varchar (10)
+                  type: varchar (15)
               - column:
                   name: okpo
                   type: varchar (20)
@@ -32,7 +32,7 @@ databaseChangeLog:
                   type: varchar (15)
               - column:
                   name: okopf
-                  type: varchar (10)
+                  type: varchar (15)
               - column:
                   name: opf
                   type: varchar (100)
@@ -84,20 +84,16 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: bigserial
+                  type: serial
                   constraints:
                     primaryKey: true
                     nullable: false
               - column:
                   name: name
                   type: varchar (100)
-                  constraints:
-                    nullable: false
               - column:
                   name: kpp
                   type: varchar (20)
-                  constraints:
-                    nullable: false
               - column:
                   name: parsed_address_rf_id
                   type: bigint
@@ -119,8 +115,6 @@ databaseChangeLog:
               - column:
                   name: date
                   type: date
-                  constraints:
-                    nullable: false
 
 
 

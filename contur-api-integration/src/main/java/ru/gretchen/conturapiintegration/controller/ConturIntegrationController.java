@@ -1,7 +1,5 @@
 package ru.gretchen.conturapiintegration.controller;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -12,7 +10,6 @@ import org.springframework.web.bind.annotation.*;
 import ru.gretchen.conturapiintegration.model.RequestEntity;
 import ru.gretchen.conturapiintegration.model.briefreport.BriefReportResponseEntity;
 import ru.gretchen.conturapiintegration.model.req.BasicDetailsResponseEntity;
-import ru.gretchen.conturapiintegration.model.req.ULEntity;
 import ru.gretchen.conturapiintegration.repository.ULRepository;
 import ru.gretchen.conturapiintegration.service.BasicDetailsResponseService;
 import ru.gretchen.conturapiintegration.service.RequestService;

@@ -8,7 +8,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: bigserial
+                  type: serial
                   constraints:
                     primaryKey: true
                     nullable: false
@@ -18,15 +18,13 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: bigserial
+                  type: serial
                   constraints:
                     primaryKey: true
                     nullable: false
               - column:
                   name: kpp
-                  type: varchar (10)
-                  constraints:
-                    nullable: false
+                  type: varchar (15)
               - column:
                   name: date
                   type: date
@@ -42,30 +40,22 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: bigserial
+                  type: serial
                   constraints:
                     primaryKey: true
                     nullable: false
               - column:
                   name: short_name
                   type: varchar (100)
-                  constraints:
-                    nullable: false
               - column:
                   name: full_name
                   type: varchar (150)
-                  constraints:
-                    nullable: false
               - column:
                   name: readable_name
                   type: varchar (100)
-                  constraints:
-                    nullable: false
               - column:
                   name: date
                   type: date
-                  constraints:
-                    nullable: false
               - column:
                   name: ul_history_id
                   type: bigint
@@ -78,22 +68,22 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: bigserial
+                  type: serial
                   constraints:
                     primaryKey: true
                     nullable: false
               - column:
                   name: zip_code
-                  type: varchar (10)
+                  type: varchar (15)
               - column:
                   name: kladr_code
                   type: varchar (20)
               - column:
                   name: region_code
-                  type: varchar (10)
+                  type: varchar (15)
               - column:
                   name: region_topo_short_name
-                  type: varchar (10)
+                  type: varchar (15)
               - column:
                   name: region_topo_full_name
                   type: varchar (50)
@@ -102,7 +92,7 @@ databaseChangeLog:
                   type: varchar (50)
               - column:
                   name: city_topo_short_name
-                  type: varchar (10)
+                  type: varchar (15)
               - column:
                   name: city_topo_full_name
                   type: varchar (50)
@@ -111,7 +101,7 @@ databaseChangeLog:
                   type: varchar (50)
               - column:
                   name: settlement_topo_short_name
-                  type: varchar (10)
+                  type: varchar (15)
               - column:
                   name: settlement_topo_full_name
                   type: varchar (50)
@@ -120,7 +110,7 @@ databaseChangeLog:
                   type: varchar (50)
               - column:
                   name: street_topo_short_name
-                  type: varchar (10)
+                  type: varchar (15)
               - column:
                   name: street_topo_full_name
                   type: varchar (50)
@@ -129,7 +119,7 @@ databaseChangeLog:
                   type: varchar (50)
               - column:
                   name: house_topo_short_name
-                  type: varchar (10)
+                  type: varchar (15)
               - column:
                   name: house_topo_full_name
                   type: varchar (50)
@@ -138,7 +128,7 @@ databaseChangeLog:
                   type: varchar (50)
               - column:
                   name: bulk_topo_short_name
-                  type: varchar (10)
+                  type: varchar (15)
               - column:
                   name: bulk_topo_full_name
                   type: varchar (50)
@@ -147,7 +137,7 @@ databaseChangeLog:
                   type: varchar (50)
               - column:
                   name: flat_topo_short_name
-                  type: varchar (10)
+                  type: varchar (15)
               - column:
                   name: flat_topo_full_name
                   type: varchar (50)
@@ -156,13 +146,13 @@ databaseChangeLog:
                   type: varchar (50)
               - column:
                   name: house_raw
-                  type: varchar (10)
+                  type: varchar (15)
               - column:
                   name: bulk_raw
-                  type: varchar (10)
+                  type: varchar (15)
               - column:
                   name: flat_raw
-                  type: varchar (10)
+                  type: varchar (15)
               - column:
                   name: is_converted
                   type: boolean
@@ -172,7 +162,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: bigserial
+                  type: serial
                   constraints:
                     primaryKey: true
                     nullable: false

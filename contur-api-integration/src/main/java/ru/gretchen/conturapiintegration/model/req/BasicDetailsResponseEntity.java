@@ -36,14 +36,14 @@ public class BasicDetailsResponseEntity {
     @OneToOne(fetch = FetchType.LAZY,
             cascade = CascadeType.PERSIST,
             orphanRemoval = true)
-    @JoinColumn(name = "ul_id", referencedColumnName = "id")
+    @JoinColumn(name = "ul_id")
     @JsonProperty("UL")
     private ULEntity UL;
 
     @OneToOne(fetch = FetchType.LAZY,
             cascade = CascadeType.PERSIST,
             orphanRemoval = true)
-    @JoinColumn(name = "ip_id", referencedColumnName = "id")
+    @JoinColumn(name = "ip_id")
     @JsonProperty("IP")
     private IPEntity IP;
 

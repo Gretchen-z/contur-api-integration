@@ -29,7 +29,7 @@ public class LegalAddressEntity {
     @OneToOne(fetch = FetchType.LAZY,
             cascade = CascadeType.PERSIST,
             orphanRemoval = true)
-    @JoinColumn(name = "parsed_address_rf_id", referencedColumnName = "id")
+    @JoinColumn(name = "parsed_address_rf_id")
     private ParsedAddressRFEntity parsedAddressRF;
 
     @Column(name = "date")

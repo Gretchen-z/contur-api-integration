@@ -8,13 +8,13 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: bigserial
+                  type: serial
                   constraints:
                     primaryKey: true
                     nullable: false
               - column:
                   name: inn
-                  type: varchar (12)
+                  type: varchar (15)
                   constraints:
                     nullable: false
 
@@ -23,25 +23,19 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: bigserial
+                  type: serial
                   constraints:
                     primaryKey: true
                     nullable: false
               - column:
                   name: inn
-                  type: varchar (12)
-                  constraints:
-                    nullable: false
+                  type: varchar (15)
               - column:
                   name: ogrn
                   type: varchar (15)
-                  constraints:
-                    nullable: false
               - column:
                   name: focus_href
-                  type: varchar (50)
-                  constraints:
-                    nullable: false
+                  type: varchar (150)
               - column:
                   name: green_statements
                   type: boolean
@@ -60,58 +54,40 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: bigserial
+                  type: serial
                   constraints:
                     primaryKey: true
                     nullable: false
               - column:
                   name: fio
                   type: varchar (100)
-                  constraints:
-                    nullable: false
               - column:
                   name: okpo
                   type: varchar (15)
-                  constraints:
-                    nullable: false
               - column:
                   name: okato
                   type: varchar (15)
-                  constraints:
-                    nullable: false
               - column:
                   name: okfs
-                  type: varchar (10)
-                  constraints:
-                    nullable: false
+                  type: varchar (15)
               - column:
                   name: okogu
-                  type: varchar (10)
-                  constraints:
-                    nullable: false
+                  type: varchar (15)
               - column:
                   name: okopf
-                  type: varchar (10)
-                  constraints:
-                    nullable: false
+                  type: varchar (15)
               - column:
                   name: oktmo
                   type: varchar (15)
-                  constraints:
-                    nullable: false
               - column:
                   name: registration_date
                   type: date
-                  constraints:
-                    nullable: false
               - column:
                   name: dissolution_date
                   type: date
               - column:
                   name: status_string
                   type: varchar (100)
-                  constraints:
-                    nullable: false
               - column:
                   name: dissolving
                   type: boolean

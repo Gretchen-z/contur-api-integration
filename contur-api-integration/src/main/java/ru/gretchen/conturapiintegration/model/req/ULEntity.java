@@ -52,13 +52,13 @@ public class ULEntity {
     @OneToOne(fetch = FetchType.LAZY,
             cascade = CascadeType.PERSIST,
             orphanRemoval = true)
-    @JoinColumn(name = "legal_name_id", referencedColumnName = "id")
+    @JoinColumn(name = "legal_name_id")
     private LegalNameEntity legalName;
 
     @OneToOne(fetch = FetchType.LAZY,
             cascade = CascadeType.PERSIST,
             orphanRemoval = true)
-    @JoinColumn(name = "legal_address_id", referencedColumnName = "id")
+    @JoinColumn(name = "legal_address_id")
     private LegalAddressEntity legalAddress;
 
     @OneToMany(fetch = FetchType.LAZY,

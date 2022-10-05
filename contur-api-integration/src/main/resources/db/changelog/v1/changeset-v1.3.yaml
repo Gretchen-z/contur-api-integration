@@ -8,7 +8,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: bigserial
+                  type: serial
                   constraints:
                     primaryKey: true
                     nullable: false
@@ -24,13 +24,9 @@ databaseChangeLog:
               - column:
                   name: date
                   type: date
-                  constraints:
-                    nullable: false
               - column:
                   name: first_date
                   type: date
-                  constraints:
-                    nullable: false
               - column:
                   name: is_inaccuracy
                   type: boolean
@@ -52,21 +48,25 @@ databaseChangeLog:
                   constraints:
                     foreignKeyName: FK_UL_HISTORY_UL_HEAD
                     references: OUT_KF_RESPONSE_UL_HISTORY(id)
+              - column:
+                  name: ul_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: FK_UL_UL_HEAD
+                    references: OUT_KF_RESPONSE_UL(id)
 
         - createTable:
             tableName: OUT_KF_RESPONSE_UL_MANAGEMENT_COMPANY
             columns:
               - column:
                   name: id
-                  type: bigserial
+                  type: serial
                   constraints:
                     primaryKey: true
                     nullable: false
               - column:
                   name: name
                   type: varchar (100)
-                  constraints:
-                    nullable: false
               - column:
                   name: inn
                   type: varchar (20)
