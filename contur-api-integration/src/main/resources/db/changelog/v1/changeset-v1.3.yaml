@@ -8,7 +8,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: bigint
+                  type: bigserial
                   constraints:
                     primaryKey: true
                     nullable: false
@@ -48,7 +48,7 @@ databaseChangeLog:
                   type: varchar (30)
               - column:
                   name: ul_history_id
-                  type: bigint
+                  type: bigserial
                   constraints:
                     foreignKeyName: FK_UL_HISTORY_UL_HEAD
                     references: OUT_KF_RESPONSE_UL_HISTORY(id)
@@ -58,7 +58,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: bigint
+                  type: bigserial
                   constraints:
                     primaryKey: true
                     nullable: false
@@ -87,7 +87,7 @@ databaseChangeLog:
                   type: date
               - column:
                   name: ul_history_id
-                  type: bigint
+                  type: bigserial
                   constraints:
                     foreignKeyName: FK_UL_HISTORY_UL_MANAGEMENT_COMPANY
                     references: OUT_KF_RESPONSE_UL_HISTORY(id)

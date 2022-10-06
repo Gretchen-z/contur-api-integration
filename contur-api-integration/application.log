@@ -1,0 +1,829 @@
+2022-10-06 11:11:24.909  INFO 16823 --- [restartedMain] r.g.c.ConturApiIntegrationApplication    : Starting ConturApiIntegrationApplication using Java 18.0.2 on Fedors-MacBook-Pro.local with PID 16823 (/Users/fedorkrasilnikov/Desktop/merged_focus_api/contur-api-integration/target/classes started by fedorkrasilnikov in /Users/fedorkrasilnikov/Desktop/merged_focus_api/contur-api-integration)
+2022-10-06 11:11:24.910  INFO 16823 --- [restartedMain] r.g.c.ConturApiIntegrationApplication    : No active profile set, falling back to 1 default profile: "default"
+2022-10-06 11:11:24.929  INFO 16823 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-10-06 11:11:24.929  INFO 16823 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-10-06 11:11:25.251  INFO 16823 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-06 11:11:25.283  INFO 16823 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 13 JPA repository interfaces.
+2022-10-06 11:11:25.523  INFO 16823 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-10-06 11:11:25.526  INFO 16823 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-06 11:11:25.526  INFO 16823 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-06 11:11:25.552  INFO 16823 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-06 11:11:25.553  INFO 16823 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 624 ms
+2022-10-06 11:11:25.624  INFO 16823 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-06 11:11:25.703  INFO 16823 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-06 11:11:25.770  INFO 16823 --- [restartedMain] liquibase.database                       : Set default schema name to public
+2022-10-06 11:11:25.834  INFO 16823 --- [restartedMain] liquibase.lockservice                    : Successfully acquired change log lock
+2022-10-06 11:11:25.957  INFO 16823 --- [restartedMain] liquibase.changelog                      : Reading from public.databasechangelog
+2022-10-06 11:11:26.013  INFO 16823 --- [restartedMain] liquibase.lockservice                    : Successfully released change log lock
+2022-10-06 11:11:26.051 DEBUG 16823 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2022-10-06 11:11:26.057  INFO 16823 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-06 11:11:26.073  INFO 16823 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-10-06 11:11:26.119  INFO 16823 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-06 11:11:26.152  INFO 16823 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-10-06 11:11:26.416  INFO 16823 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-06 11:11:26.419  INFO 16823 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-06 11:11:26.455 DEBUG 16823 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:11:26.469 DEBUG 16823 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:11:26.484 DEBUG 16823 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:11:26.510 DEBUG 16823 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:11:26.514 DEBUG 16823 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:11:26.524 DEBUG 16823 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:11:26.550 DEBUG 16823 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:11:26.660  WARN 16823 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-06 11:11:26.754  INFO 16823 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-10-06 11:11:26.794 DEBUG 16823 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:11:26.794 DEBUG 16823 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:11:26.801 DEBUG 16823 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:11:26.802 DEBUG 16823 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:11:26.808 DEBUG 16823 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:11:26.809 DEBUG 16823 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:11:26.820 DEBUG 16823 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:11:26.820 DEBUG 16823 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:11:26.827 DEBUG 16823 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:11:26.827 DEBUG 16823 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:11:26.834 DEBUG 16823 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:11:26.834 DEBUG 16823 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:11:26.840 DEBUG 16823 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:11:26.841 DEBUG 16823 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:11:26.847 DEBUG 16823 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:11:26.848 DEBUG 16823 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:11:26.855 DEBUG 16823 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:11:26.855 DEBUG 16823 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:11:26.862 DEBUG 16823 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:11:26.862 DEBUG 16823 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:11:26.916  INFO 16823 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-10-06 11:11:27.018  INFO 16823 --- [restartedMain] r.g.c.ConturApiIntegrationApplication    : Started ConturApiIntegrationApplication in 2.248 seconds (JVM running for 2.674)
+2022-10-06 11:13:12.242  INFO 16823 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-06 11:13:12.245  INFO 16823 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-10-06 11:13:12.245  INFO 16823 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-10-06 11:13:17.205  INFO 16834 --- [restartedMain] r.g.c.ConturApiIntegrationApplication    : Starting ConturApiIntegrationApplication using Java 18.0.2 on Fedors-MacBook-Pro.local with PID 16834 (/Users/fedorkrasilnikov/Desktop/merged_focus_api/contur-api-integration/target/classes started by fedorkrasilnikov in /Users/fedorkrasilnikov/Desktop/merged_focus_api/contur-api-integration)
+2022-10-06 11:13:17.207  INFO 16834 --- [restartedMain] r.g.c.ConturApiIntegrationApplication    : No active profile set, falling back to 1 default profile: "default"
+2022-10-06 11:13:17.229  INFO 16834 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-10-06 11:13:17.229  INFO 16834 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-10-06 11:13:17.557  INFO 16834 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-06 11:13:17.588  INFO 16834 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 13 JPA repository interfaces.
+2022-10-06 11:13:17.831  INFO 16834 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-10-06 11:13:17.834  INFO 16834 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-06 11:13:17.835  INFO 16834 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-06 11:13:17.863  INFO 16834 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-06 11:13:17.863  INFO 16834 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 634 ms
+2022-10-06 11:13:17.935  INFO 16834 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-06 11:13:18.006  INFO 16834 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-06 11:13:18.101  INFO 16834 --- [restartedMain] liquibase.database                       : Set default schema name to public
+2022-10-06 11:13:18.156  INFO 16834 --- [restartedMain] liquibase.lockservice                    : Successfully acquired change log lock
+2022-10-06 11:13:18.279  INFO 16834 --- [restartedMain] liquibase.changelog                      : Reading from public.databasechangelog
+2022-10-06 11:13:18.330  INFO 16834 --- [restartedMain] liquibase.lockservice                    : Successfully released change log lock
+2022-10-06 11:13:18.370 DEBUG 16834 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2022-10-06 11:13:18.376  INFO 16834 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-06 11:13:18.396  INFO 16834 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-10-06 11:13:18.436  INFO 16834 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-06 11:13:18.465  INFO 16834 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-10-06 11:13:18.722  INFO 16834 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-06 11:13:18.725  INFO 16834 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-06 11:13:18.761 DEBUG 16834 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:13:18.774 DEBUG 16834 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:13:18.789 DEBUG 16834 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:13:18.813 DEBUG 16834 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:13:18.818 DEBUG 16834 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:13:18.827 DEBUG 16834 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:13:18.853 DEBUG 16834 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:13:18.959  WARN 16834 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-06 11:13:19.053  INFO 16834 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-10-06 11:13:19.091 DEBUG 16834 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:13:19.092 DEBUG 16834 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:13:19.099 DEBUG 16834 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:13:19.099 DEBUG 16834 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:13:19.106 DEBUG 16834 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:13:19.106 DEBUG 16834 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:13:19.117 DEBUG 16834 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:13:19.118 DEBUG 16834 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:13:19.125 DEBUG 16834 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:13:19.126 DEBUG 16834 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:13:19.132 DEBUG 16834 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:13:19.133 DEBUG 16834 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:13:19.139 DEBUG 16834 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:13:19.140 DEBUG 16834 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:13:19.146 DEBUG 16834 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:13:19.147 DEBUG 16834 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:13:19.153 DEBUG 16834 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:13:19.154 DEBUG 16834 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:13:19.161 DEBUG 16834 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:13:19.161 DEBUG 16834 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:13:19.214  INFO 16834 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-10-06 11:13:19.324  INFO 16834 --- [restartedMain] r.g.c.ConturApiIntegrationApplication    : Started ConturApiIntegrationApplication in 2.262 seconds (JVM running for 2.482)
+2022-10-06 11:14:44.278  INFO 16834 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-06 11:14:44.278  INFO 16834 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-06 11:14:44.279  INFO 16834 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-10-06 11:14:44.288  INFO 16834 --- [http-nio-8080-exec-1] Controller                               : B03088149E80E40936CD2CFF7EB7CCA6POST/requests/brief-reports
+2022-10-06 11:14:44.289 DEBUG 16834 --- [http-nio-8080-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-10-06 11:14:44.300 DEBUG 16834 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(358166663<open>)] for JPA transaction
+2022-10-06 11:14:44.300 DEBUG 16834 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [ru.gretchen.conturapiintegration.service.impl.RequestServiceImpl.saveInn]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2022-10-06 11:14:44.303 DEBUG 16834 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@7e4c8fa4]
+2022-10-06 11:14:44.307 DEBUG 16834 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(358166663<open>)] for JPA transaction
+2022-10-06 11:14:44.307 DEBUG 16834 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+2022-10-06 11:14:44.324  WARN 16834 --- [http-nio-8080-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23502
+2022-10-06 11:14:44.325 ERROR 16834 --- [http-nio-8080-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: null value in column "id" of relation "in_kf_request" violates not-null constraint
+  Detail: Failing row contains (null, 6663003127).
+2022-10-06 11:14:44.328 DEBUG 16834 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Participating transaction failed - marking existing transaction as rollback-only
+2022-10-06 11:14:44.328 DEBUG 16834 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Setting JPA transaction on EntityManager [SessionImpl(358166663<open>)] rollback-only
+2022-10-06 11:14:44.329 DEBUG 16834 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction rollback
+2022-10-06 11:14:44.329 DEBUG 16834 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Rolling back JPA transaction on EntityManager [SessionImpl(358166663<open>)]
+2022-10-06 11:14:44.331 DEBUG 16834 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2022-10-06 11:14:44.332  INFO 16834 --- [http-nio-8080-exec-1] IntegratorResponseEntityExceptionHandler : Не удалось сохранить запрос с ИНН 6663003127 could not execute statement; SQL [n/a]; constraint [id" of relation "in_kf_request]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+2022-10-06 11:14:44.340  WARN 16834 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [ru.gretchen.conturapiintegration.exception.RequestNotSaveException: Не удалось сохранить запрос с ИНН 6663003127 could not execute statement; SQL [n/a]; constraint [id" of relation "in_kf_request]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2022-10-06 11:14:44.340 DEBUG 16834 --- [http-nio-8080-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-10-06 11:14:44.341  INFO 16834 --- [http-nio-8080-exec-1] Controller                               : B03088149E80E40936CD2CFF7EB7CCA6Status: 400
+2022-10-06 11:15:00.045  INFO 16834 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-06 11:15:00.047  INFO 16834 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-10-06 11:15:00.048  INFO 16834 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-10-06 11:15:02.355  INFO 16842 --- [restartedMain] r.g.c.ConturApiIntegrationApplication    : Starting ConturApiIntegrationApplication using Java 18.0.2 on Fedors-MacBook-Pro.local with PID 16842 (/Users/fedorkrasilnikov/Desktop/merged_focus_api/contur-api-integration/target/classes started by fedorkrasilnikov in /Users/fedorkrasilnikov/Desktop/merged_focus_api/contur-api-integration)
+2022-10-06 11:15:02.356  INFO 16842 --- [restartedMain] r.g.c.ConturApiIntegrationApplication    : No active profile set, falling back to 1 default profile: "default"
+2022-10-06 11:15:02.379  INFO 16842 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-10-06 11:15:02.379  INFO 16842 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-10-06 11:15:02.728  INFO 16842 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-06 11:15:02.766  INFO 16842 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 13 JPA repository interfaces.
+2022-10-06 11:15:03.027  INFO 16842 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-10-06 11:15:03.031  INFO 16842 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-06 11:15:03.031  INFO 16842 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-06 11:15:03.061  INFO 16842 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-06 11:15:03.061  INFO 16842 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 682 ms
+2022-10-06 11:15:03.146  INFO 16842 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-06 11:15:03.206  INFO 16842 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-06 11:15:03.299  INFO 16842 --- [restartedMain] liquibase.database                       : Set default schema name to public
+2022-10-06 11:15:03.355  INFO 16842 --- [restartedMain] liquibase.lockservice                    : Successfully acquired change log lock
+2022-10-06 11:15:03.501  INFO 16842 --- [restartedMain] liquibase.changelog                      : Reading from public.databasechangelog
+2022-10-06 11:15:03.570  INFO 16842 --- [restartedMain] liquibase.lockservice                    : Successfully released change log lock
+2022-10-06 11:15:03.611 DEBUG 16842 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2022-10-06 11:15:03.617  INFO 16842 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-06 11:15:03.637  INFO 16842 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-10-06 11:15:03.686  INFO 16842 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-06 11:15:03.723  INFO 16842 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-10-06 11:15:04.005  INFO 16842 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-06 11:15:04.008  INFO 16842 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-06 11:15:04.087 DEBUG 16842 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:15:04.102 DEBUG 16842 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:15:04.122 DEBUG 16842 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:15:04.152 DEBUG 16842 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:15:04.157 DEBUG 16842 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:15:04.166 DEBUG 16842 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:15:04.194 DEBUG 16842 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:15:04.310  WARN 16842 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-06 11:15:04.413  INFO 16842 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-10-06 11:15:04.450 DEBUG 16842 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:15:04.451 DEBUG 16842 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:15:04.458 DEBUG 16842 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:15:04.458 DEBUG 16842 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:15:04.465 DEBUG 16842 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:15:04.466 DEBUG 16842 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:15:04.472 DEBUG 16842 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:15:04.472 DEBUG 16842 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:15:04.479 DEBUG 16842 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:15:04.479 DEBUG 16842 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:15:04.486 DEBUG 16842 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:15:04.486 DEBUG 16842 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:15:04.498 DEBUG 16842 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:15:04.499 DEBUG 16842 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:15:04.506 DEBUG 16842 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:15:04.506 DEBUG 16842 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:15:04.513 DEBUG 16842 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:15:04.513 DEBUG 16842 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:15:04.521 DEBUG 16842 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:15:04.521 DEBUG 16842 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:15:04.579  INFO 16842 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-10-06 11:15:04.689  INFO 16842 --- [restartedMain] r.g.c.ConturApiIntegrationApplication    : Started ConturApiIntegrationApplication in 2.483 seconds (JVM running for 3.294)
+2022-10-06 11:15:10.480  INFO 16842 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-06 11:15:10.480  INFO 16842 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-06 11:15:10.481  INFO 16842 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-10-06 11:15:10.496  INFO 16842 --- [http-nio-8080-exec-1] Controller                               : 6428EA0EA2C142903979BC2B5CD57079POST/requests/brief-reports
+2022-10-06 11:15:10.497 DEBUG 16842 --- [http-nio-8080-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-10-06 11:40:09.488  WARN 16842 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=25m6s177ms).
+2022-10-06 11:40:09.514 DEBUG 16842 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(1103255582<open>)] for JPA transaction
+2022-10-06 11:40:09.515 DEBUG 16842 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [ru.gretchen.conturapiintegration.service.impl.RequestServiceImpl.saveInn]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2022-10-06 11:40:09.534 DEBUG 16842 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@44b8817c]
+2022-10-06 11:40:09.599 DEBUG 16842 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(1103255582<open>)] for JPA transaction
+2022-10-06 11:40:09.600 DEBUG 16842 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+2022-10-06 11:40:09.737  WARN 16842 --- [http-nio-8080-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23502
+2022-10-06 11:40:09.738 ERROR 16842 --- [http-nio-8080-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: null value in column "id" of relation "in_kf_request" violates not-null constraint
+  Detail: Failing row contains (null, 6663003127).
+2022-10-06 11:40:09.764 DEBUG 16842 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Participating transaction failed - marking existing transaction as rollback-only
+2022-10-06 11:40:09.765 DEBUG 16842 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Setting JPA transaction on EntityManager [SessionImpl(1103255582<open>)] rollback-only
+2022-10-06 11:40:09.783 DEBUG 16842 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction rollback
+2022-10-06 11:40:09.784 DEBUG 16842 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Rolling back JPA transaction on EntityManager [SessionImpl(1103255582<open>)]
+2022-10-06 11:40:09.792 DEBUG 16842 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2022-10-06 11:40:09.793  INFO 16842 --- [http-nio-8080-exec-1] IntegratorResponseEntityExceptionHandler : Не удалось сохранить запрос с ИНН 6663003127 could not execute statement; SQL [n/a]; constraint [id" of relation "in_kf_request]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+2022-10-06 11:40:09.808  WARN 16842 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Failure in @ExceptionHandler ru.gretchen.conturapiintegration.exception.ConturIntegratorResponseEntityExceptionHandler#handleConturIntegratorException(RuntimeException, WebRequest)
+
+org.apache.catalina.connector.ClientAbortException: java.io.IOException: Broken pipe
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:310) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:273) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:118) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at java.base/sun.nio.cs.StreamEncoder.implFlush(StreamEncoder.java:320) ~[na:na]
+	at java.base/sun.nio.cs.StreamEncoder.flush(StreamEncoder.java:160) ~[na:na]
+	at java.base/java.io.OutputStreamWriter.flush(OutputStreamWriter.java:250) ~[na:na]
+	at org.springframework.util.StreamUtils.copy(StreamUtils.java:148) ~[spring-core-5.3.22.jar:5.3.22]
+	at org.springframework.http.converter.StringHttpMessageConverter.writeInternal(StringHttpMessageConverter.java:126) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.http.converter.StringHttpMessageConverter.writeInternal(StringHttpMessageConverter.java:44) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.http.converter.AbstractHttpMessageConverter.write(AbstractHttpMessageConverter.java:227) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:293) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:219) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:135) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:428) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:75) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:142) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1330) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1141) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1087) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.65.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.65.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.FileDispatcherImpl.write0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62) ~[na:na]
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137) ~[na:na]
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:102) ~[na:na]
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:58) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:532) ~[na:na]
+	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:135) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.doWrite(NioEndpoint.java:1424) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.SocketWrapperBase.doWrite(SocketWrapperBase.java:768) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.SocketWrapperBase.flushBlocking(SocketWrapperBase.java:732) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.SocketWrapperBase.flush(SocketWrapperBase.java:716) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer.flush(Http11OutputBuffer.java:573) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.http11.filters.IdentityOutputFilter.flush(IdentityOutputFilter.java:117) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.http11.Http11OutputBuffer.flush(Http11OutputBuffer.java:221) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.http11.Http11Processor.flush(Http11Processor.java:1255) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:402) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.Response.action(Response.java:209) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:306) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	... 59 common frames omitted
+
+2022-10-06 11:40:09.809 DEBUG 16842 --- [http-nio-8080-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-10-06 11:40:09.809  WARN 16842 --- [http-nio-8080-exec-1] Controller                               : 6428EA0EA2C142903979BC2B5CD57079Не удалось сохранить запрос с ИНН 6663003127 could not execute statement; SQL [n/a]; constraint [id" of relation "in_kf_request]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+2022-10-06 11:40:09.862  INFO 16842 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-06 11:40:09.864  INFO 16842 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-10-06 11:40:09.865  INFO 16842 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-10-06 11:40:15.153  INFO 16951 --- [restartedMain] r.g.c.ConturApiIntegrationApplication    : Starting ConturApiIntegrationApplication using Java 18.0.2 on Fedors-MacBook-Pro.local with PID 16951 (/Users/fedorkrasilnikov/Desktop/merged_focus_api/contur-api-integration/target/classes started by fedorkrasilnikov in /Users/fedorkrasilnikov/Desktop/merged_focus_api/contur-api-integration)
+2022-10-06 11:40:15.153  INFO 16951 --- [restartedMain] r.g.c.ConturApiIntegrationApplication    : No active profile set, falling back to 1 default profile: "default"
+2022-10-06 11:40:15.173  INFO 16951 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-10-06 11:40:15.174  INFO 16951 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-10-06 11:40:15.543  INFO 16951 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-06 11:40:15.579  INFO 16951 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 13 JPA repository interfaces.
+2022-10-06 11:40:15.847  INFO 16951 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-10-06 11:40:15.851  INFO 16951 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-06 11:40:15.851  INFO 16951 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-06 11:40:15.880  INFO 16951 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-06 11:40:15.880  INFO 16951 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 706 ms
+2022-10-06 11:40:15.980  INFO 16951 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-06 11:40:16.051  INFO 16951 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-06 11:40:16.154  INFO 16951 --- [restartedMain] liquibase.database                       : Set default schema name to public
+2022-10-06 11:40:16.211  INFO 16951 --- [restartedMain] liquibase.lockservice                    : Successfully acquired change log lock
+2022-10-06 11:40:16.352  INFO 16951 --- [restartedMain] liquibase.changelog                      : Reading from public.databasechangelog
+2022-10-06 11:40:16.409  INFO 16951 --- [restartedMain] liquibase.lockservice                    : Successfully released change log lock
+2022-10-06 11:40:16.445 DEBUG 16951 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2022-10-06 11:40:16.451  INFO 16951 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-06 11:40:16.468  INFO 16951 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-10-06 11:40:16.517  INFO 16951 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-06 11:40:16.551  INFO 16951 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-10-06 11:40:16.833  INFO 16951 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-06 11:40:16.836  INFO 16951 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-06 11:40:16.884 DEBUG 16951 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:40:16.899 DEBUG 16951 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:40:16.916 DEBUG 16951 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:40:16.945 DEBUG 16951 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:40:16.950 DEBUG 16951 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:40:16.964 DEBUG 16951 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:40:17.002 DEBUG 16951 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:40:17.119  WARN 16951 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-06 11:40:17.224  INFO 16951 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-10-06 11:40:17.270 DEBUG 16951 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:40:17.271 DEBUG 16951 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:40:17.278 DEBUG 16951 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:40:17.278 DEBUG 16951 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:40:17.285 DEBUG 16951 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:40:17.286 DEBUG 16951 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:40:17.293 DEBUG 16951 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:40:17.293 DEBUG 16951 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:40:17.300 DEBUG 16951 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:40:17.301 DEBUG 16951 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:40:17.308 DEBUG 16951 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:40:17.308 DEBUG 16951 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:40:17.315 DEBUG 16951 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:40:17.315 DEBUG 16951 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:40:17.322 DEBUG 16951 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:40:17.322 DEBUG 16951 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:40:17.329 DEBUG 16951 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:40:17.330 DEBUG 16951 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:40:17.336 DEBUG 16951 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:40:17.337 DEBUG 16951 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:40:17.401  INFO 16951 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-10-06 11:40:17.511  INFO 16951 --- [restartedMain] r.g.c.ConturApiIntegrationApplication    : Started ConturApiIntegrationApplication in 2.507 seconds (JVM running for 2.792)
+2022-10-06 11:43:07.308  INFO 16951 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-06 11:43:07.311  INFO 16951 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-10-06 11:43:07.312  INFO 16951 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-10-06 11:43:12.488  INFO 16964 --- [restartedMain] r.g.c.ConturApiIntegrationApplication    : Starting ConturApiIntegrationApplication using Java 18.0.2 on Fedors-MacBook-Pro.local with PID 16964 (/Users/fedorkrasilnikov/Desktop/merged_focus_api/contur-api-integration/target/classes started by fedorkrasilnikov in /Users/fedorkrasilnikov/Desktop/merged_focus_api/contur-api-integration)
+2022-10-06 11:43:12.489  INFO 16964 --- [restartedMain] r.g.c.ConturApiIntegrationApplication    : No active profile set, falling back to 1 default profile: "default"
+2022-10-06 11:43:12.510  INFO 16964 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-10-06 11:43:12.510  INFO 16964 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-10-06 11:43:12.825  INFO 16964 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-06 11:43:12.860  INFO 16964 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 13 JPA repository interfaces.
+2022-10-06 11:43:13.152  INFO 16964 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-10-06 11:43:13.155  INFO 16964 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-06 11:43:13.155  INFO 16964 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-06 11:43:13.184  INFO 16964 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-06 11:43:13.185  INFO 16964 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 675 ms
+2022-10-06 11:43:13.264  INFO 16964 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-06 11:43:13.346  INFO 16964 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-06 11:43:13.441  INFO 16964 --- [restartedMain] liquibase.database                       : Set default schema name to public
+2022-10-06 11:43:13.501  INFO 16964 --- [restartedMain] liquibase.lockservice                    : Successfully acquired change log lock
+2022-10-06 11:43:13.631  INFO 16964 --- [restartedMain] liquibase.changelog                      : Reading from public.databasechangelog
+2022-10-06 11:43:13.696  INFO 16964 --- [restartedMain] liquibase.lockservice                    : Successfully released change log lock
+2022-10-06 11:43:13.793 DEBUG 16964 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2022-10-06 11:43:13.800  INFO 16964 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-06 11:43:13.819  INFO 16964 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-10-06 11:43:13.879  INFO 16964 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-06 11:43:13.918  INFO 16964 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-10-06 11:43:14.197  INFO 16964 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-06 11:43:14.200  INFO 16964 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-06 11:43:14.236 DEBUG 16964 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:43:14.249 DEBUG 16964 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:43:14.263 DEBUG 16964 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:43:14.290 DEBUG 16964 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:43:14.295 DEBUG 16964 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:43:14.306 DEBUG 16964 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:43:14.337 DEBUG 16964 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:43:14.444  WARN 16964 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-06 11:43:14.537  INFO 16964 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-10-06 11:43:14.572 DEBUG 16964 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:43:14.573 DEBUG 16964 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:43:14.585 DEBUG 16964 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:43:14.585 DEBUG 16964 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:43:14.592 DEBUG 16964 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:43:14.592 DEBUG 16964 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:43:14.600 DEBUG 16964 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:43:14.600 DEBUG 16964 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:43:14.607 DEBUG 16964 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:43:14.608 DEBUG 16964 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:43:14.615 DEBUG 16964 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:43:14.615 DEBUG 16964 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:43:14.622 DEBUG 16964 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:43:14.622 DEBUG 16964 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:43:14.629 DEBUG 16964 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:43:14.630 DEBUG 16964 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:43:14.636 DEBUG 16964 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:43:14.637 DEBUG 16964 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:43:14.644 DEBUG 16964 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:43:14.644 DEBUG 16964 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:43:14.705  INFO 16964 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-10-06 11:43:14.825  INFO 16964 --- [restartedMain] r.g.c.ConturApiIntegrationApplication    : Started ConturApiIntegrationApplication in 2.475 seconds (JVM running for 2.906)
+2022-10-06 11:44:47.249  INFO 16964 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-06 11:44:47.250  INFO 16964 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-06 11:44:47.251  INFO 16964 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-10-06 11:44:47.260  INFO 16964 --- [http-nio-8080-exec-1] Controller                               : 5532DE65DF981779C5F399E5BEEFF92DPOST/requests/brief-reports
+2022-10-06 11:44:47.260 DEBUG 16964 --- [http-nio-8080-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-10-06 11:44:47.271 DEBUG 16964 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(1481481833<open>)] for JPA transaction
+2022-10-06 11:44:47.271 DEBUG 16964 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [ru.gretchen.conturapiintegration.service.impl.RequestServiceImpl.saveInn]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2022-10-06 11:44:47.274 DEBUG 16964 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@67b03aae]
+2022-10-06 11:44:47.278 DEBUG 16964 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(1481481833<open>)] for JPA transaction
+2022-10-06 11:44:47.278 DEBUG 16964 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+2022-10-06 11:44:47.299  WARN 16964 --- [http-nio-8080-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23502
+2022-10-06 11:44:47.299 ERROR 16964 --- [http-nio-8080-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: null value in column "id" of relation "in_kf_request" violates not-null constraint
+  Detail: Failing row contains (null, 6663003127).
+2022-10-06 11:44:47.303 DEBUG 16964 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Participating transaction failed - marking existing transaction as rollback-only
+2022-10-06 11:44:47.303 DEBUG 16964 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Setting JPA transaction on EntityManager [SessionImpl(1481481833<open>)] rollback-only
+2022-10-06 11:44:47.304 DEBUG 16964 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction rollback
+2022-10-06 11:44:47.305 DEBUG 16964 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Rolling back JPA transaction on EntityManager [SessionImpl(1481481833<open>)]
+2022-10-06 11:44:47.307 DEBUG 16964 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2022-10-06 11:44:47.308  INFO 16964 --- [http-nio-8080-exec-1] IntegratorResponseEntityExceptionHandler : Не удалось сохранить запрос с ИНН 6663003127 could not execute statement; SQL [n/a]; constraint [id" of relation "in_kf_request]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+2022-10-06 11:44:47.316  WARN 16964 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [ru.gretchen.conturapiintegration.exception.RequestNotSaveException: Не удалось сохранить запрос с ИНН 6663003127 could not execute statement; SQL [n/a]; constraint [id" of relation "in_kf_request]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2022-10-06 11:44:47.316 DEBUG 16964 --- [http-nio-8080-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-10-06 11:44:47.319  INFO 16964 --- [http-nio-8080-exec-1] Controller                               : 5532DE65DF981779C5F399E5BEEFF92DStatus: 400
+2022-10-06 11:47:33.238  INFO 16964 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-06 11:47:33.241  INFO 16964 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-10-06 11:47:33.242  INFO 16964 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-10-06 11:47:38.375  INFO 17036 --- [restartedMain] r.g.c.ConturApiIntegrationApplication    : Starting ConturApiIntegrationApplication using Java 18.0.2 on Fedors-MacBook-Pro.local with PID 17036 (/Users/fedorkrasilnikov/Desktop/merged_focus_api/contur-api-integration/target/classes started by fedorkrasilnikov in /Users/fedorkrasilnikov/Desktop/merged_focus_api/contur-api-integration)
+2022-10-06 11:47:38.375  INFO 17036 --- [restartedMain] r.g.c.ConturApiIntegrationApplication    : No active profile set, falling back to 1 default profile: "default"
+2022-10-06 11:47:38.394  INFO 17036 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-10-06 11:47:38.395  INFO 17036 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-10-06 11:47:38.702  INFO 17036 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-06 11:47:38.731  INFO 17036 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 13 JPA repository interfaces.
+2022-10-06 11:47:38.961  INFO 17036 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-10-06 11:47:38.964  INFO 17036 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-06 11:47:38.964  INFO 17036 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-06 11:47:38.989  INFO 17036 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-06 11:47:38.990  INFO 17036 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 595 ms
+2022-10-06 11:47:39.073  INFO 17036 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-06 11:47:39.137  INFO 17036 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-06 11:47:39.227  INFO 17036 --- [restartedMain] liquibase.database                       : Set default schema name to public
+2022-10-06 11:47:39.280  INFO 17036 --- [restartedMain] liquibase.lockservice                    : Successfully acquired change log lock
+2022-10-06 11:47:39.399  INFO 17036 --- [restartedMain] liquibase.changelog                      : Reading from public.databasechangelog
+2022-10-06 11:47:39.444  INFO 17036 --- [restartedMain] liquibase.lockservice                    : Successfully released change log lock
+2022-10-06 11:47:39.446  WARN 17036 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.ValidationFailedException: Validation Failed:
+     5 change sets check sum
+          db/changelog/v1/changeset-v1.0.yaml::1.0::gretchen was: 8:1357782404419b78f8cdba557489f143 but is now: 8:e66bf26b20146d0bf6f4fe946cb079e1
+          db/changelog/v1/changeset-v1.1.yaml::1.1::gretchen was: 8:222c83e35163bb57cc45fbb63d97507d but is now: 8:1b31c1c6b0e7189233d56ab95c3fdbe4
+          db/changelog/v1/changeset-v1.2.yaml::1.2::gretchen was: 8:b69d88a3d62a766b2a504e7d6840b9fc but is now: 8:569889acde0978bb9f6797db3f341a6d
+          db/changelog/v1/changeset-v1.3.yaml::1.3::gretchen was: 8:f269b6a646b1a215cc381e3fa1073c86 but is now: 8:fd05a1b494ce63b55f1606aedd347dee
+          db/changelog/v1/changeset-v1.4.yaml::1.4::gretchen was: 8:66029849fbffae095f2750c3426de74a but is now: 8:3cc7da533095179347150bd5555b8ea7
+
+2022-10-06 11:47:39.446  INFO 17036 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-10-06 11:47:39.448  INFO 17036 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-10-06 11:47:39.448  INFO 17036 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-10-06 11:47:39.455  INFO 17036 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-10-06 11:47:39.466 ERROR 17036 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.ValidationFailedException: Validation Failed:
+     5 change sets check sum
+          db/changelog/v1/changeset-v1.0.yaml::1.0::gretchen was: 8:1357782404419b78f8cdba557489f143 but is now: 8:e66bf26b20146d0bf6f4fe946cb079e1
+          db/changelog/v1/changeset-v1.1.yaml::1.1::gretchen was: 8:222c83e35163bb57cc45fbb63d97507d but is now: 8:1b31c1c6b0e7189233d56ab95c3fdbe4
+          db/changelog/v1/changeset-v1.2.yaml::1.2::gretchen was: 8:b69d88a3d62a766b2a504e7d6840b9fc but is now: 8:569889acde0978bb9f6797db3f341a6d
+          db/changelog/v1/changeset-v1.3.yaml::1.3::gretchen was: 8:f269b6a646b1a215cc381e3fa1073c86 but is now: 8:fd05a1b494ce63b55f1606aedd347dee
+          db/changelog/v1/changeset-v1.4.yaml::1.4::gretchen was: 8:66029849fbffae095f2750c3426de74a but is now: 8:3cc7da533095179347150bd5555b8ea7
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.3.jar:2.7.3]
+	at ru.gretchen.conturapiintegration.ConturApiIntegrationApplication.main(ConturApiIntegrationApplication.java:21) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.3.jar:2.7.3]
+Caused by: liquibase.exception.ValidationFailedException: Validation Failed:
+     5 change sets check sum
+          db/changelog/v1/changeset-v1.0.yaml::1.0::gretchen was: 8:1357782404419b78f8cdba557489f143 but is now: 8:e66bf26b20146d0bf6f4fe946cb079e1
+          db/changelog/v1/changeset-v1.1.yaml::1.1::gretchen was: 8:222c83e35163bb57cc45fbb63d97507d but is now: 8:1b31c1c6b0e7189233d56ab95c3fdbe4
+          db/changelog/v1/changeset-v1.2.yaml::1.2::gretchen was: 8:b69d88a3d62a766b2a504e7d6840b9fc but is now: 8:569889acde0978bb9f6797db3f341a6d
+          db/changelog/v1/changeset-v1.3.yaml::1.3::gretchen was: 8:f269b6a646b1a215cc381e3fa1073c86 but is now: 8:fd05a1b494ce63b55f1606aedd347dee
+          db/changelog/v1/changeset-v1.4.yaml::1.4::gretchen was: 8:66029849fbffae095f2750c3426de74a but is now: 8:3cc7da533095179347150bd5555b8ea7
+
+	at liquibase.changelog.DatabaseChangeLog.validate(DatabaseChangeLog.java:296) ~[liquibase-core-4.9.1.jar:na]
+	at liquibase.Liquibase.lambda$update$1(Liquibase.java:231) ~[liquibase-core-4.9.1.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:180) ~[liquibase-core-4.9.1.jar:na]
+	at liquibase.Scope.child(Scope.java:189) ~[liquibase-core-4.9.1.jar:na]
+	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.9.1.jar:na]
+	at liquibase.Scope.child(Scope.java:158) ~[liquibase-core-4.9.1.jar:na]
+	at liquibase.Liquibase.runInScope(Liquibase.java:2405) ~[liquibase-core-4.9.1.jar:na]
+	at liquibase.Liquibase.update(Liquibase.java:211) ~[liquibase-core-4.9.1.jar:na]
+	at liquibase.Liquibase.update(Liquibase.java:197) ~[liquibase-core-4.9.1.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:314) ~[liquibase-core-4.9.1.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:269) ~[liquibase-core-4.9.1.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.22.jar:5.3.22]
+	... 21 common frames omitted
+
+2022-10-06 11:50:11.885  INFO 17046 --- [restartedMain] r.g.c.ConturApiIntegrationApplication    : Starting ConturApiIntegrationApplication using Java 18.0.2 on Fedors-MacBook-Pro.local with PID 17046 (/Users/fedorkrasilnikov/Desktop/merged_focus_api/contur-api-integration/target/classes started by fedorkrasilnikov in /Users/fedorkrasilnikov/Desktop/merged_focus_api/contur-api-integration)
+2022-10-06 11:50:11.886  INFO 17046 --- [restartedMain] r.g.c.ConturApiIntegrationApplication    : No active profile set, falling back to 1 default profile: "default"
+2022-10-06 11:50:11.905  INFO 17046 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-10-06 11:50:11.905  INFO 17046 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-10-06 11:50:12.230  INFO 17046 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-06 11:50:12.261  INFO 17046 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 13 JPA repository interfaces.
+2022-10-06 11:50:12.509  INFO 17046 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-10-06 11:50:12.512  INFO 17046 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-06 11:50:12.512  INFO 17046 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-06 11:50:12.538  INFO 17046 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-06 11:50:12.538  INFO 17046 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 633 ms
+2022-10-06 11:50:12.615  INFO 17046 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-06 11:50:12.686  INFO 17046 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-06 11:50:12.776  INFO 17046 --- [restartedMain] liquibase.database                       : Set default schema name to public
+2022-10-06 11:50:12.840  INFO 17046 --- [restartedMain] liquibase.lockservice                    : Successfully acquired change log lock
+2022-10-06 11:50:12.925  INFO 17046 --- [restartedMain] liquibase.changelog                      : Creating database history table with name: public.databasechangelog
+2022-10-06 11:50:12.931  INFO 17046 --- [restartedMain] liquibase.changelog                      : Reading from public.databasechangelog
+2022-10-06 11:50:13.003  INFO 17046 --- [restartedMain] liquibase.changelog                      : Table IN_KF_REQUEST created
+2022-10-06 11:50:13.007  INFO 17046 --- [restartedMain] liquibase.changelog                      : Table OUT_KF_RESPONSE_BRIEF_REPORT created
+2022-10-06 11:50:13.010  INFO 17046 --- [restartedMain] liquibase.changelog                      : Table OUT_KF_RESPONSE_IP created
+2022-10-06 11:50:13.012  INFO 17046 --- [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/v1/changeset-v1.0.yaml::1.0::gretchen ran successfully in 13ms
+2022-10-06 11:50:13.019  INFO 17046 --- [restartedMain] liquibase.changelog                      : Table OUT_KF_RESPONSE_UL_HISTORY created
+2022-10-06 11:50:13.023  INFO 17046 --- [restartedMain] liquibase.changelog                      : Table OUT_KF_RESPONSE_UL_KPP created
+2022-10-06 11:50:13.027  INFO 17046 --- [restartedMain] liquibase.changelog                      : Table OUT_KF_RESPONSE_UL_LEGAL_NAME created
+2022-10-06 11:50:13.031  INFO 17046 --- [restartedMain] liquibase.changelog                      : Table OUT_KF_RESPONSE_UL_PARSED_ADDRESS_RF created
+2022-10-06 11:50:13.035  INFO 17046 --- [restartedMain] liquibase.changelog                      : Table OUT_KF_RESPONSE_UL_LEGAL_ADDRESS created
+2022-10-06 11:50:13.036  INFO 17046 --- [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/v1/changeset-v1.1.yaml::1.1::gretchen ran successfully in 20ms
+2022-10-06 11:50:13.043  INFO 17046 --- [restartedMain] liquibase.changelog                      : Table OUT_KF_RESPONSE_UL created
+2022-10-06 11:50:13.047  INFO 17046 --- [restartedMain] liquibase.changelog                      : Table OUT_KF_RESPONSE_UL_BRANCH created
+2022-10-06 11:50:13.049  INFO 17046 --- [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/v1/changeset-v1.2.yaml::1.2::gretchen ran successfully in 9ms
+2022-10-06 11:50:13.055  INFO 17046 --- [restartedMain] liquibase.changelog                      : Table OUT_KF_RESPONSE_UL_HEAD created
+2022-10-06 11:50:13.058  INFO 17046 --- [restartedMain] liquibase.changelog                      : Table OUT_KF_RESPONSE_UL_MANAGEMENT_COMPANY created
+2022-10-06 11:50:13.060  INFO 17046 --- [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/v1/changeset-v1.3.yaml::1.3::gretchen ran successfully in 7ms
+2022-10-06 11:50:13.064  INFO 17046 --- [restartedMain] liquibase.changelog                      : Table OUT_KF_RESPONSE_BASIC_DETAILS_CONTACT_PHONE created
+2022-10-06 11:50:13.068  INFO 17046 --- [restartedMain] liquibase.changelog                      : Table OUT_KF_RESPONSE_BASIC_DETAILS created
+2022-10-06 11:50:13.070  INFO 17046 --- [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/v1/changeset-v1.4.yaml::1.4::gretchen ran successfully in 8ms
+2022-10-06 11:50:13.074  INFO 17046 --- [restartedMain] liquibase.lockservice                    : Successfully released change log lock
+2022-10-06 11:50:13.113 DEBUG 17046 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2022-10-06 11:50:13.118  INFO 17046 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-06 11:50:13.133  INFO 17046 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-10-06 11:50:13.177  INFO 17046 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-06 11:50:13.208  INFO 17046 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-10-06 11:50:13.457  INFO 17046 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-06 11:50:13.460  INFO 17046 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-06 11:50:13.495 DEBUG 17046 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:50:13.508 DEBUG 17046 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:50:13.523 DEBUG 17046 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:50:13.548 DEBUG 17046 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:50:13.551 DEBUG 17046 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:50:13.561 DEBUG 17046 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:50:13.584 DEBUG 17046 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:50:13.689  WARN 17046 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-06 11:50:13.776  INFO 17046 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-10-06 11:50:13.811 DEBUG 17046 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:50:13.812 DEBUG 17046 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:50:13.819 DEBUG 17046 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:50:13.819 DEBUG 17046 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:50:13.826 DEBUG 17046 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:50:13.826 DEBUG 17046 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:50:13.837 DEBUG 17046 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:50:13.837 DEBUG 17046 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:50:13.844 DEBUG 17046 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:50:13.844 DEBUG 17046 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:50:13.851 DEBUG 17046 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:50:13.852 DEBUG 17046 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:50:13.858 DEBUG 17046 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:50:13.859 DEBUG 17046 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:50:13.865 DEBUG 17046 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:50:13.866 DEBUG 17046 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:50:13.872 DEBUG 17046 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:50:13.873 DEBUG 17046 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:50:13.879 DEBUG 17046 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:50:13.880 DEBUG 17046 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 11:50:13.930  INFO 17046 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-10-06 11:50:14.031  INFO 17046 --- [restartedMain] r.g.c.ConturApiIntegrationApplication    : Started ConturApiIntegrationApplication in 2.279 seconds (JVM running for 2.717)
+2022-10-06 11:50:30.233  INFO 17046 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-06 11:50:30.233  INFO 17046 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-06 11:50:30.234  INFO 17046 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-10-06 11:50:30.239  INFO 17046 --- [http-nio-8080-exec-1] Controller                               : 5532DE65DF981779C5F399E5BEEFF92DPOST/requests/brief-reports
+2022-10-06 11:50:30.240 DEBUG 17046 --- [http-nio-8080-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-10-06 11:50:30.250 DEBUG 17046 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(1440773192<open>)] for JPA transaction
+2022-10-06 11:50:30.251 DEBUG 17046 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [ru.gretchen.conturapiintegration.service.impl.RequestServiceImpl.saveInn]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2022-10-06 11:50:30.254 DEBUG 17046 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@6daab830]
+2022-10-06 11:50:30.258 DEBUG 17046 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(1440773192<open>)] for JPA transaction
+2022-10-06 11:50:30.258 DEBUG 17046 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+2022-10-06 11:50:30.277 DEBUG 17046 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2022-10-06 11:50:30.277 DEBUG 17046 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(1440773192<open>)]
+2022-10-06 11:50:30.280 DEBUG 17046 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2022-10-06 11:50:30.295 DEBUG 17046 --- [http-nio-8080-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-10-06 11:50:30.296  INFO 17046 --- [http-nio-8080-exec-1] Controller                               : 5532DE65DF981779C5F399E5BEEFF92DStatus: 201
+2022-10-06 11:51:55.553  INFO 17046 --- [http-nio-8080-exec-3] Controller                               : 5532DE65DF981779C5F399E5BEEFF92DGET/requests/brief-reports
+2022-10-06 11:51:55.553 DEBUG 17046 --- [http-nio-8080-exec-3] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-10-06 11:51:55.554 DEBUG 17046 --- [http-nio-8080-exec-3] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(1689814977<open>)] for JPA transaction
+2022-10-06 11:51:55.554 DEBUG 17046 --- [http-nio-8080-exec-3] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [ru.gretchen.conturapiintegration.service.impl.RequestServiceImpl.getRequestById]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2022-10-06 11:51:55.556 DEBUG 17046 --- [http-nio-8080-exec-3] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@58552c2f]
+2022-10-06 11:51:55.556 DEBUG 17046 --- [http-nio-8080-exec-3] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(1689814977<open>)] for JPA transaction
+2022-10-06 11:51:55.556 DEBUG 17046 --- [http-nio-8080-exec-3] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+2022-10-06 11:51:55.566 DEBUG 17046 --- [http-nio-8080-exec-3] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2022-10-06 11:51:55.566 DEBUG 17046 --- [http-nio-8080-exec-3] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(1689814977<open>)]
+2022-10-06 11:51:55.567 DEBUG 17046 --- [http-nio-8080-exec-3] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2022-10-06 11:51:55.858 DEBUG 17046 --- [http-nio-8080-exec-3] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-10-06 11:51:55.858  WARN 17046 --- [http-nio-8080-exec-3] Controller                               : 5532DE65DF981779C5F399E5BEEFF92Djava.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+2022-10-06 11:51:55.861 ERROR 17046 --- [http-nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $] with root cause
+
+java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:385) ~[gson-2.9.0.jar:na]
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:214) ~[gson-2.9.0.jar:na]
+	at com.google.gson.Gson.fromJson(Gson.java:991) ~[gson-2.9.0.jar:na]
+	at com.google.gson.Gson.fromJson(Gson.java:956) ~[gson-2.9.0.jar:na]
+	at com.google.gson.Gson.fromJson(Gson.java:905) ~[gson-2.9.0.jar:na]
+	at com.google.gson.Gson.fromJson(Gson.java:876) ~[gson-2.9.0.jar:na]
+	at ru.gretchen.conturapiintegration.service.impl.ConturIntegratorServiceImpl.getBriefReport(ConturIntegratorServiceImpl.java:54) ~[classes/:na]
+	at ru.gretchen.conturapiintegration.controller.ConturIntegrationController.getBriefReportFromConturFocus(ConturIntegrationController.java:46) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1070) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.65.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.65.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2022-10-06 11:51:55.864  INFO 17046 --- [http-nio-8080-exec-3] Controller                               : 5532DE65DF981779C5F399E5BEEFF92DGET/error
+2022-10-06 11:51:55.864 DEBUG 17046 --- [http-nio-8080-exec-3] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-10-06 11:51:55.873 DEBUG 17046 --- [http-nio-8080-exec-3] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-10-06 11:51:55.873  INFO 17046 --- [http-nio-8080-exec-3] Controller                               : 5532DE65DF981779C5F399E5BEEFF92DStatus: 500
+2022-10-06 12:00:24.157  INFO 17046 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-06 12:00:24.165  INFO 17046 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-10-06 12:00:24.175  INFO 17046 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-10-06 12:00:29.244  INFO 17098 --- [restartedMain] r.g.c.ConturApiIntegrationApplication    : Starting ConturApiIntegrationApplication using Java 18.0.2 on Fedors-MacBook-Pro.local with PID 17098 (/Users/fedorkrasilnikov/Desktop/merged_focus_api/contur-api-integration/target/classes started by fedorkrasilnikov in /Users/fedorkrasilnikov/Desktop/merged_focus_api/contur-api-integration)
+2022-10-06 12:00:29.245  INFO 17098 --- [restartedMain] r.g.c.ConturApiIntegrationApplication    : No active profile set, falling back to 1 default profile: "default"
+2022-10-06 12:00:29.265  INFO 17098 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-10-06 12:00:29.265  INFO 17098 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-10-06 12:00:29.605  INFO 17098 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-06 12:00:29.640  INFO 17098 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 13 JPA repository interfaces.
+2022-10-06 12:00:29.887  INFO 17098 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-10-06 12:00:29.891  INFO 17098 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-06 12:00:29.892  INFO 17098 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-06 12:00:29.919  INFO 17098 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-06 12:00:29.919  INFO 17098 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 654 ms
+2022-10-06 12:00:30.003  INFO 17098 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-06 12:00:30.073  INFO 17098 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-06 12:00:30.148  INFO 17098 --- [restartedMain] liquibase.database                       : Set default schema name to public
+2022-10-06 12:00:30.218  INFO 17098 --- [restartedMain] liquibase.lockservice                    : Successfully acquired change log lock
+2022-10-06 12:00:30.367  INFO 17098 --- [restartedMain] liquibase.changelog                      : Reading from public.databasechangelog
+2022-10-06 12:00:30.432  INFO 17098 --- [restartedMain] liquibase.lockservice                    : Successfully released change log lock
+2022-10-06 12:00:30.472 DEBUG 17098 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2022-10-06 12:00:30.477  INFO 17098 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-06 12:00:30.493  INFO 17098 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-10-06 12:00:30.535  INFO 17098 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-06 12:00:30.565  INFO 17098 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-10-06 12:00:30.822  INFO 17098 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-06 12:00:30.825  INFO 17098 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-06 12:00:30.861 DEBUG 17098 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 12:00:30.874 DEBUG 17098 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 12:00:30.889 DEBUG 17098 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 12:00:30.915 DEBUG 17098 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 12:00:30.919 DEBUG 17098 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 12:00:30.930 DEBUG 17098 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 12:00:30.959 DEBUG 17098 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 12:00:31.081  WARN 17098 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-06 12:00:31.172  INFO 17098 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-10-06 12:00:31.208 DEBUG 17098 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 12:00:31.209 DEBUG 17098 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 12:00:31.216 DEBUG 17098 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 12:00:31.216 DEBUG 17098 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 12:00:31.223 DEBUG 17098 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 12:00:31.223 DEBUG 17098 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 12:00:31.234 DEBUG 17098 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 12:00:31.235 DEBUG 17098 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 12:00:31.242 DEBUG 17098 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 12:00:31.242 DEBUG 17098 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 12:00:31.249 DEBUG 17098 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 12:00:31.249 DEBUG 17098 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 12:00:31.257 DEBUG 17098 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 12:00:31.257 DEBUG 17098 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 12:00:31.265 DEBUG 17098 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 12:00:31.266 DEBUG 17098 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 12:00:31.275 DEBUG 17098 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 12:00:31.276 DEBUG 17098 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 12:00:31.284 DEBUG 17098 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 12:00:31.284 DEBUG 17098 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-10-06 12:00:31.342  INFO 17098 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-10-06 12:00:31.443  INFO 17098 --- [restartedMain] r.g.c.ConturApiIntegrationApplication    : Started ConturApiIntegrationApplication in 2.327 seconds (JVM running for 2.691)
+2022-10-06 12:01:05.190  INFO 17098 --- [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-06 12:01:05.190  INFO 17098 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-06 12:01:05.191  INFO 17098 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-10-06 12:01:05.197  INFO 17098 --- [http-nio-8080-exec-3] Controller                               : 5532DE65DF981779C5F399E5BEEFF92D GET/requests/brief-reports
+2022-10-06 12:01:05.197 DEBUG 17098 --- [http-nio-8080-exec-3] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-10-06 12:01:05.205 DEBUG 17098 --- [http-nio-8080-exec-3] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(1856068484<open>)] for JPA transaction
+2022-10-06 12:01:05.205 DEBUG 17098 --- [http-nio-8080-exec-3] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [ru.gretchen.conturapiintegration.service.impl.RequestServiceImpl.getRequestById]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2022-10-06 12:01:05.209 DEBUG 17098 --- [http-nio-8080-exec-3] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@5fe6f78d]
+2022-10-06 12:01:05.212 DEBUG 17098 --- [http-nio-8080-exec-3] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(1856068484<open>)] for JPA transaction
+2022-10-06 12:01:05.212 DEBUG 17098 --- [http-nio-8080-exec-3] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+2022-10-06 12:01:05.227 DEBUG 17098 --- [http-nio-8080-exec-3] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2022-10-06 12:01:05.227 DEBUG 17098 --- [http-nio-8080-exec-3] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(1856068484<open>)]
+2022-10-06 12:01:05.229 DEBUG 17098 --- [http-nio-8080-exec-3] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2022-10-06 12:01:05.487 DEBUG 17098 --- [http-nio-8080-exec-3] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-10-06 12:01:05.488  WARN 17098 --- [http-nio-8080-exec-3] Controller                               : 5532DE65DF981779C5F399E5BEEFF92D java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+2022-10-06 12:01:05.491 ERROR 17098 --- [http-nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $] with root cause
+
+java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:385) ~[gson-2.9.0.jar:na]
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:214) ~[gson-2.9.0.jar:na]
+	at com.google.gson.Gson.fromJson(Gson.java:991) ~[gson-2.9.0.jar:na]
+	at com.google.gson.Gson.fromJson(Gson.java:956) ~[gson-2.9.0.jar:na]
+	at com.google.gson.Gson.fromJson(Gson.java:905) ~[gson-2.9.0.jar:na]
+	at com.google.gson.Gson.fromJson(Gson.java:876) ~[gson-2.9.0.jar:na]
+	at ru.gretchen.conturapiintegration.service.impl.ConturIntegratorServiceImpl.getBriefReport(ConturIntegratorServiceImpl.java:54) ~[classes/:na]
+	at ru.gretchen.conturapiintegration.controller.ConturIntegrationController.getBriefReportFromConturFocus(ConturIntegrationController.java:46) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1070) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.65.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.65.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2022-10-06 12:01:05.493  INFO 17098 --- [http-nio-8080-exec-3] Controller                               : 5532DE65DF981779C5F399E5BEEFF92D GET/error
+2022-10-06 12:01:05.493 DEBUG 17098 --- [http-nio-8080-exec-3] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-10-06 12:01:05.513 DEBUG 17098 --- [http-nio-8080-exec-3] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-10-06 12:01:05.513  INFO 17098 --- [http-nio-8080-exec-3] Controller                               : 5532DE65DF981779C5F399E5BEEFF92D Status: 500

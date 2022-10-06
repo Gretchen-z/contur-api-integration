@@ -1,5 +1,6 @@
 package ru.gretchen.conturapiintegration.model.req;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -39,12 +40,14 @@ public class BasicDetailsResponseEntity {
             cascade = CascadeType.PERSIST,
             orphanRemoval = true)
     @JoinColumn(name = "ul_id", referencedColumnName = "id")
+    @JsonProperty("UL")
     private ULEntity UL;
 
     @OneToOne(fetch = FetchType.LAZY,
             cascade = CascadeType.PERSIST,
             orphanRemoval = true)
     @JoinColumn(name = "ip_id", referencedColumnName = "id")
+    @JsonProperty("IP")
     private IPEntity IP;
 
     @Embedded

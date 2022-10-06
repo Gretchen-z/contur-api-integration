@@ -8,7 +8,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: bigint
+                  type: bigserial
                   constraints:
                     primaryKey: true
                     nullable: false
@@ -21,7 +21,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: bigint
+                  type: bigserial
                   constraints:
                     primaryKey: true
                     nullable: false
@@ -36,13 +36,13 @@ databaseChangeLog:
                   type: varchar (100)
               - column:
                   name: ul_id
-                  type: bigint
+                  type: bigserial
                   constraints:
                     foreignKeyName: FK_UL_BASIC_DETAILS
                     references: OUT_KF_RESPONSE_UL(id)
               - column:
                   name: ip_id
-                  type: bigint
+                  type: bigserial
                   constraints:
                     foreignKeyName: FK_IP_BASIC_DETAILS
                     references: OUT_KF_RESPONSE_IP(id)
@@ -63,7 +63,7 @@ databaseChangeLog:
                   type: bigint
               - column:
                   name: contact_phone_id
-                  type: bigint
+                  type: bigserial
                   constraints:
                     foreignKeyName: FK_CONTACT_PHONES_BASIC_DETAILS
                     references: OUT_KF_RESPONSE_BASIC_DETAILS_CONTACT_PHONE(id)

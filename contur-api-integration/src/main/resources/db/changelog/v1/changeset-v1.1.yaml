@@ -8,7 +8,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: bigint
+                  type: bigserial
                   constraints:
                     primaryKey: true
                     nullable: false
@@ -18,7 +18,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: bigint
+                  type: bigserial
                   constraints:
                     primaryKey: true
                     nullable: false
@@ -32,7 +32,7 @@ databaseChangeLog:
                   type: date
               - column:
                   name: ul_history_id
-                  type: bigint
+                  type: bigserial
                   constraints:
                     foreignKeyName: FK_UL_HISTORY_UL_KPP
                     references: OUT_KF_RESPONSE_UL_HISTORY(id)
@@ -42,7 +42,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: bigint
+                  type: bigserial
                   constraints:
                     primaryKey: true
                     nullable: false
@@ -68,7 +68,7 @@ databaseChangeLog:
                     nullable: false
               - column:
                   name: ul_history_id
-                  type: bigint
+                  type: bigserial
                   constraints:
                     foreignKeyName: FK_UL_HISTORY_UL_LEGAL_NAME
                     references: OUT_KF_RESPONSE_UL_HISTORY(id)
@@ -78,7 +78,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: bigint
+                  type: bigserial
                   constraints:
                     primaryKey: true
                     nullable: false
@@ -172,13 +172,13 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: bigint
+                  type: bigserial
                   constraints:
                     primaryKey: true
                     nullable: false
               - column:
                   name: parsed_address_rf_id
-                  type: bigint
+                  type: bigserial
                   constraints:
                     foreignKeyName: FK_PARSED_ADDRESS_LEGAL_ADDRESS
                     references: OUT_KF_RESPONSE_UL_PARSED_ADDRESS_RF(id)
@@ -196,7 +196,7 @@ databaseChangeLog:
                   type: date
               - column:
                   name: ul_history_id
-                  type: bigint
+                  type: bigserial
                   constraints:
                     foreignKeyName: FK_UL_HISTORY_LEGAL_ADDRESS
                     references: OUT_KF_RESPONSE_UL_HISTORY(id)
