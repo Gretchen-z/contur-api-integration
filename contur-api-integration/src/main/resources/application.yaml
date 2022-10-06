@@ -1,7 +1,7 @@
 spring:
   jpa:
     show-sql: true
-    defer-datasource-initialization: true
+    defer-datasource-initialization: false
     generate-ddl: true
     hibernate:
       ddl-auto: update
@@ -22,6 +22,8 @@ spring:
     enabled: true
     change-log: db/changelog/db-changelog-master.yaml
 logging:
+  file:
+    name: application.log
   level:
     org.hibernate.sql: TRACE
     org.springframework.orm.jpa: DEBUG

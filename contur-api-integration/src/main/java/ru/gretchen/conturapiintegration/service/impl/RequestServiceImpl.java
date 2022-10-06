@@ -5,10 +5,12 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import ru.gretchen.conturapiintegration.exception.InnIsNotValidException;
 import ru.gretchen.conturapiintegration.exception.RequestNotExistException;
 import ru.gretchen.conturapiintegration.exception.RequestNotSaveException;
 import ru.gretchen.conturapiintegration.model.RequestEntity;
 import ru.gretchen.conturapiintegration.repository.RequestRepository;
+import ru.gretchen.conturapiintegration.service.InnValidatorService;
 import ru.gretchen.conturapiintegration.service.RequestService;
 
 @Service
@@ -17,6 +19,7 @@ import ru.gretchen.conturapiintegration.service.RequestService;
 public class RequestServiceImpl implements RequestService {
 
     private final RequestRepository repository;
+    private final InnValidatorService validatorService;
 
     @Override
     public RequestEntity getRequestById(Long id) {
@@ -27,6 +30,9 @@ public class RequestServiceImpl implements RequestService {
     @Override
     @Transactional
     public ResponseEntity<Long> saveInn(String inn) {
+        if(!validatorService.isValid(inn)) {
+            throw new InnIsNotValidException(inn);
+        }
         try {
             RequestEntity entity = new RequestEntity();
             entity.setInn(inn);
