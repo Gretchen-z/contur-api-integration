@@ -17,6 +17,16 @@ logging:
     org.hibernate.sql: TRACE
     org.springframework.orm.jpa: DEBUG
     org.springframework.transaction: DEBUG
+camunda:
+  bpm:
+    admin-user:
+      id: demo
+      password: demo
+      first-name: SuperUser
+    filter:
+      create: All task
+server:
+  port: 8080
 conturintegrator:
   service:
     uri_brief_report: https://focus-api.kontur.ru/api3/briefReport
