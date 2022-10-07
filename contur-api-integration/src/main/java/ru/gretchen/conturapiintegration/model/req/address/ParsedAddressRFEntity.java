@@ -1,5 +1,6 @@
 package ru.gretchen.conturapiintegration.model.req.address;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -16,6 +17,7 @@ import javax.persistence.*;
 @Entity
 @DynamicInsert
 @DynamicUpdate
+@JsonIgnoreProperties(ignoreUnknown = true)
 @Table(name = "OUT_KF_RESPONSE_UL_PARSED_ADDRESS_RF")
 public class ParsedAddressRFEntity {
     @Id

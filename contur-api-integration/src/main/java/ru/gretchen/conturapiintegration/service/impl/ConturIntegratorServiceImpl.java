@@ -1,6 +1,7 @@
 package ru.gretchen.conturapiintegration.service.impl;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import ru.gretchen.conturapiintegration.exception.UriException;
@@ -54,8 +55,11 @@ public class ConturIntegratorServiceImpl implements ConturIntegratorService {
         BriefReportResponseEntity responseEntity = null;
 
         try {
-            responseEntity = new ObjectMapper().readValue(response.body(),
-                    BriefReportResponseEntity.class);
+            ObjectMapper mapper = new ObjectMapper();
+            mapper.registerModule(new JavaTimeModule());
+            responseEntity = mapper.readValue(response.body(),
+                    BriefReportResponseEntity[].class)[0];
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -71,8 +75,10 @@ public class ConturIntegratorServiceImpl implements ConturIntegratorService {
         BasicDetailsResponseEntity responseEntity = null;
 
         try {
-            responseEntity = new ObjectMapper().readValue(response.body(),
-                    BasicDetailsResponseEntity.class);
+            ObjectMapper mapper = new ObjectMapper();
+            mapper.registerModule(new JavaTimeModule());
+            responseEntity = mapper.readValue(response.body(),
+                    BasicDetailsResponseEntity[].class)[0];
 
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -89,10 +95,9 @@ public class ConturIntegratorServiceImpl implements ConturIntegratorService {
         HttpRequest request;
         try {
             request = HttpRequest.newBuilder()
-                    .uri(new URI(uri))
+                    .uri(new URI(uri + "?key=" + key + "&inn=" + inn))
                     .timeout(Duration.of(10, SECONDS))
                     .header("Content-Type", "application/json")
-                    .headers("inn", inn, "key", key)
                     .GET()
                     .build();
         } catch (URISyntaxException e) {

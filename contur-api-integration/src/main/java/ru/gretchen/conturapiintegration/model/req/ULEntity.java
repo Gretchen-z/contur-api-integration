@@ -1,5 +1,6 @@
 package ru.gretchen.conturapiintegration.model.req;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 import org.hibernate.Hibernate;
 import org.hibernate.annotations.DynamicInsert;
@@ -18,6 +19,7 @@ import java.util.Set;
 @Entity
 @DynamicInsert
 @DynamicUpdate
+@JsonIgnoreProperties(ignoreUnknown = true)
 @Table(name = "OUT_KF_RESPONSE_UL")
 public class ULEntity {
     @Id

@@ -33,7 +33,7 @@ databaseChangeLog:
                   type: varchar (20)
               - column:
                   name: focus_href
-                  type: varchar (100)
+                  type: varchar (500)
               - column:
                   name: ul_id
                   type: bigint

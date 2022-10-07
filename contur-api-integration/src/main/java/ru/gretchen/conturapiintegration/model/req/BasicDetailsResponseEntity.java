@@ -1,5 +1,6 @@
 package ru.gretchen.conturapiintegration.model.req;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 import org.hibernate.Hibernate;
@@ -17,6 +18,7 @@ import java.util.Objects;
 @Entity
 @DynamicInsert
 @DynamicUpdate
+@JsonIgnoreProperties(ignoreUnknown = true)
 @Table(name = "OUT_KF_RESPONSE_BASIC_DETAILS")
 public class BasicDetailsResponseEntity {
     @Id

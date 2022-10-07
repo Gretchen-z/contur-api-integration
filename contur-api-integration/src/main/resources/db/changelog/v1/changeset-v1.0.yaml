@@ -35,7 +35,7 @@ databaseChangeLog:
                   type: varchar (15)
               - column:
                   name: focus_href
-                  type: varchar (150)
+                  type: varchar (500)
               - column:
                   name: green_statements
                   type: boolean
@@ -47,7 +47,7 @@ databaseChangeLog:
                   type: boolean
               - column:
                   name: href
-                  type: varchar (150)
+                  type: varchar (500)
 
         - createTable:
             tableName: OUT_KF_RESPONSE_IP

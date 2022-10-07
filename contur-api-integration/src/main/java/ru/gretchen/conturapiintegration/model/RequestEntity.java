@@ -1,5 +1,6 @@
 package ru.gretchen.conturapiintegration.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,6 +19,7 @@ import java.util.Objects;
 @Entity
 @DynamicInsert
 @DynamicUpdate
+@JsonIgnoreProperties(ignoreUnknown = true)
 @Table(name = "IN_KF_REQUEST")
 public class RequestEntity {
     @Id
