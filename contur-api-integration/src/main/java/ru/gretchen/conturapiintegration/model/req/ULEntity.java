@@ -1,6 +1,9 @@
 package ru.gretchen.conturapiintegration.model.req;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.hibernate.Hibernate;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
@@ -8,8 +11,8 @@ import ru.gretchen.conturapiintegration.model.req.address.LegalAddressEntity;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Objects;
-import java.util.Set;
 
 @Getter
 @Setter
@@ -65,7 +68,7 @@ public class ULEntity {
             cascade = CascadeType.PERSIST,
             orphanRemoval = true)
     @JoinColumn(name = "ul_id")
-    private Set<BranchEntity> branches;
+    private List<BranchEntity> branches;
 
     @Embedded
     private StatusUL status;
@@ -80,13 +83,13 @@ public class ULEntity {
             cascade = CascadeType.PERSIST,
             orphanRemoval = true)
     @JoinColumn(name = "ul_id")
-    private Set<HeadEntity> heads;
+    private List<HeadEntity> heads;
 
     @OneToMany(fetch = FetchType.LAZY,
             cascade = CascadeType.PERSIST,
             orphanRemoval = true)
     @JoinColumn(name = "ul_id")
-    private Set<ManagementCompanyEntity> managementCompanies;
+    private List<ManagementCompanyEntity> managementCompanies;
 
     @OneToOne(fetch = FetchType.LAZY,
             cascade = CascadeType.PERSIST,

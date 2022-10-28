@@ -10,8 +10,8 @@ import org.hibernate.annotations.DynamicUpdate;
 import ru.gretchen.conturapiintegration.model.req.address.LegalAddressEntity;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Objects;
-import java.util.Set;
 
 @Getter
 @Setter
@@ -31,31 +31,31 @@ public class HistoryEntity {
             cascade = CascadeType.PERSIST,
             orphanRemoval = true)
     @JoinColumn(name = "ul_history_id")
-    private Set<KppEntity> kpps;
+    private List<KppEntity> kpps;
 
     @OneToMany(fetch = FetchType.LAZY,
             cascade = CascadeType.PERSIST,
             orphanRemoval = true)
     @JoinColumn(name = "ul_history_id")
-    private Set<LegalNameEntity> legalNames;
+    private List<LegalNameEntity> legalNames;
 
     @OneToMany(fetch = FetchType.LAZY,
             cascade = CascadeType.PERSIST,
             orphanRemoval = true)
     @JoinColumn(name = "ul_history_id")
-    private Set<LegalAddressEntity> legalAddresses;
+    private List<LegalAddressEntity> legalAddresses;
 
     @OneToMany(fetch = FetchType.LAZY,
             cascade = CascadeType.PERSIST,
             orphanRemoval = true)
     @JoinColumn(name = "ul_history_id")
-    private Set<ManagementCompanyEntity> managementCompanies;
+    private List<ManagementCompanyEntity> managementCompanies;
 
     @OneToMany(fetch = FetchType.LAZY,
             cascade = CascadeType.PERSIST,
             orphanRemoval = true)
     @JoinColumn(name = "ul_history_id")
-    private Set<HeadEntity> heads;
+    private List<HeadEntity> heads;
 
 
     @Override

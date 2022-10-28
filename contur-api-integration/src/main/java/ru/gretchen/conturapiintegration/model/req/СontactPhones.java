@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.Set;
+import java.util.List;
 
 @Embeddable
 @Getter
@@ -21,6 +21,6 @@ public class СontactPhones {
             cascade = CascadeType.PERSIST,
             orphanRemoval = true)
     @JoinColumn(name = "contact_phone_id")
-    private Set<ContactPhoneEntity> phones;
+    private List<ContactPhoneEntity> phones;
 
 }
