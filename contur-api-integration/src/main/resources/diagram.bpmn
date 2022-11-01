@@ -1,57 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_15amb1e" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.3.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
-  <bpmn:process id="Process_0phb1q9" isExecutable="true">
-    <bpmn:startEvent id="StartPizzaOrder" name="StartOrder">
-      <bpmn:outgoing>Flow_1ooepoy</bpmn:outgoing>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_12isget" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.3.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+  <bpmn:process id="ConturFocusIntegration" name="ConturFocus Integration" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>Flow_17ds3mn</bpmn:outgoing>
     </bpmn:startEvent>
-    <bpmn:endEvent id="EndPizzaOrder" name="EndOrder">
-      <bpmn:incoming>Flow_05wl4ey</bpmn:incoming>
+    <bpmn:sequenceFlow id="Flow_17ds3mn" sourceRef="StartEvent_1" targetRef="Activity_0im7nnw" />
+    <bpmn:endEvent id="Event_1r7csl3">
+      <bpmn:incoming>Flow_1xlrslv</bpmn:incoming>
     </bpmn:endEvent>
-    <bpmn:serviceTask id="Log" name="Logger" camunda:class="com.camunda.orderpizza.delegate.LogDelegate">
-      <bpmn:documentation>Производим логирование в консоль нашего заказа</bpmn:documentation>
-      <bpmn:incoming>Flow_1ooepoy</bpmn:incoming>
-      <bpmn:outgoing>Flow_1m19qce</bpmn:outgoing>
-    </bpmn:serviceTask>
-    <bpmn:serviceTask id="Activity_12vvwsa" name="ExternalTask" camunda:type="external" camunda:topic="ExternalTask">
-      <bpmn:incoming>Flow_1m19qce</bpmn:incoming>
-      <bpmn:outgoing>Flow_05wl4ey</bpmn:outgoing>
-    </bpmn:serviceTask>
-    <bpmn:sequenceFlow id="Flow_1ooepoy" sourceRef="StartPizzaOrder" targetRef="Log" />
-    <bpmn:sequenceFlow id="Flow_05wl4ey" sourceRef="Activity_12vvwsa" targetRef="EndPizzaOrder" />
-    <bpmn:sequenceFlow id="Flow_1m19qce" sourceRef="Log" targetRef="Activity_12vvwsa" />
+    <bpmn:sequenceFlow id="Flow_1xlrslv" sourceRef="Activity_0im7nnw" targetRef="Event_1r7csl3" />
+    <bpmn:userTask id="Activity_0im7nnw" name="ConturFocus Integration">
+      <bpmn:incoming>Flow_17ds3mn</bpmn:incoming>
+      <bpmn:outgoing>Flow_1xlrslv</bpmn:outgoing>
+    </bpmn:userTask>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
-    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_0phb1q9">
-      <bpmndi:BPMNShape id="BPMNShape_19xukef" bpmnElement="StartPizzaOrder">
-        <dc:Bounds x="162" y="102" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="154" y="145" width="53" height="14" />
-        </bpmndi:BPMNLabel>
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="ConturFocusIntegration">
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="179" y="99" width="36" height="36" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_1kxm2wc_di" bpmnElement="EndPizzaOrder">
-        <dc:Bounds x="605" y="102" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="601" y="145" width="49" height="14" />
-        </bpmndi:BPMNLabel>
+      <bpmndi:BPMNShape id="Event_1r7csl3_di" bpmnElement="Event_1r7csl3">
+        <dc:Bounds x="432" y="99" width="36" height="36" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0gs5o6w_di" bpmnElement="Log">
-        <dc:Bounds x="253" y="80" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_1syj20q_di" bpmnElement="Activity_12vvwsa">
-        <dc:Bounds x="413" y="80" width="100" height="80" />
+      <bpmndi:BPMNShape id="Activity_0zxbv0y_di" bpmnElement="Activity_0im7nnw">
+        <dc:Bounds x="270" y="77" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="Flow_1ooepoy_di" bpmnElement="Flow_1ooepoy">
-        <di:waypoint x="198" y="120" />
-        <di:waypoint x="253" y="120" />
+      <bpmndi:BPMNEdge id="Flow_17ds3mn_di" bpmnElement="Flow_17ds3mn">
+        <di:waypoint x="215" y="117" />
+        <di:waypoint x="270" y="117" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_05wl4ey_di" bpmnElement="Flow_05wl4ey">
-        <di:waypoint x="513" y="120" />
-        <di:waypoint x="605" y="120" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1m19qce_di" bpmnElement="Flow_1m19qce">
-        <di:waypoint x="353" y="120" />
-        <di:waypoint x="413" y="120" />
+      <bpmndi:BPMNEdge id="Flow_1xlrslv_di" bpmnElement="Flow_1xlrslv">
+        <di:waypoint x="370" y="117" />
+        <di:waypoint x="432" y="117" />
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
